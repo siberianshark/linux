@@ -1,0 +1,894 @@
+11111111
+user@user-VirtualBox:~$ mkdir lesson6
+user@user-VirtualBox:~$ cd lesson6
+user@user-VirtualBox:~/lesson6$ ls -la
+total 8
+drwxr-xr-x  2 user devel 4096 апр  4 23:00 .
+drwxr-xr-x 21 user devel 4096 апр  4 23:00 ..
+user@user-VirtualBox:~/lesson6$ nano text.txt
+user@user-VirtualBox:~/lesson6$ nano script.sh
+user@user-VirtualBox:~/lesson6$ ls -la
+total 16
+drwxr-xr-x  2 user devel 4096 апр  4 23:09 .
+drwxr-xr-x 21 user devel 4096 апр  4 23:00 ..
+-rw-r--r--  1 user devel   70 апр  4 23:09 script.sh
+-rw-r--r--  1 user devel   67 апр  4 23:02 text.txt
+user@user-VirtualBox:~/lesson6$ sudo chmod +x script.sh
+[sudo] password for user: 
+user@user-VirtualBox:~/lesson6$ ls -la
+total 16
+drwxr-xr-x  2 user devel 4096 апр  4 23:09 .
+drwxr-xr-x 21 user devel 4096 апр  4 23:00 ..
+-rwxr-xr-x  1 user devel   70 апр  4 23:09 script.sh
+-rw-r--r--  1 user devel   67 апр  4 23:02 text.txt
+user@user-VirtualBox:~/lesson6$ ./script.sh > text2.txt
+user@user-VirtualBox:~/lesson6$ ls -la
+total 20
+drwxr-xr-x  2 user devel 4096 апр  4 23:11 .
+drwxr-xr-x 21 user devel 4096 апр  4 23:00 ..
+-rwxr-xr-x  1 user devel   70 апр  4 23:09 script.sh
+-rw-r--r--  1 user devel   67 апр  4 23:11 text2.txt
+-rw-r--r--  1 user devel   67 апр  4 23:02 text.txt
+user@user-VirtualBox:~/lesson6$ nano text2.txt
+user@user-VirtualBox:~/lesson6$ 
+
+
+
+
+
+
+2222222222222222
+
+user@user-VirtualBox:~/lesson6$ nano script2.sh
+user@user-VirtualBox:~/lesson6$ sudo chmod +x script2.sh
+[sudo] password for user: 
+user@user-VirtualBox:~/lesson6$ ls -la
+total 24
+drwxr-xr-x  2 user devel 4096 апр  4 23:31 .
+drwxr-xr-x 21 user devel 4096 апр  4 23:00 ..
+-rwxr-xr-x  1 user devel  166 апр  4 23:31 script2.sh
+-rwxr-xr-x  1 user devel   70 апр  4 23:09 script.sh
+-rw-r--r--  1 user devel   67 апр  4 23:11 text2.txt
+-rw-r--r--  1 user devel   67 апр  4 23:02 text.txt
+user@user-VirtualBox:~/lesson6$ ./script2.sh
+user@user-VirtualBox:~/lesson6$ ls -la
+total 28
+drwxr-xr-x  3 user devel 4096 апр  4 23:33 .
+drwxr-xr-x 21 user devel 4096 апр  4 23:00 ..
+drwxr-xr-x  3 user devel 4096 апр  4 23:33 lesson6
+-rwxr-xr-x  1 user devel  166 апр  4 23:31 script2.sh
+-rwxr-xr-x  1 user devel   70 апр  4 23:09 script.sh
+-rw-r--r--  1 user devel   67 апр  4 23:11 text2.txt
+-rw-r--r--  1 user devel   67 апр  4 23:02 text.txt
+user@user-VirtualBox:~/lesson6$ mc
+
+
+
+
+
+
+
+333333333333333333333333333333
+
+
+user@user-VirtualBox:~/lesson6$ ls -la /etc
+total 1132
+drwxr-xr-x 131 root root   12288 апр  1 22:39 .
+drwxr-xr-x  20 root root    4096 мар 15 15:44 ..
+drwxr-xr-x   3 root root    4096 фев 23 15:50 acpi
+-rw-r--r--   1 root root    3028 фев 23 15:47 adduser.conf
+drwxr-xr-x   3 root root    4096 фев 23 15:48 alsa
+drwxr-xr-x   2 root root    4096 мар 22 01:34 alternatives
+-rw-r--r--   1 root root     401 июл 17  2019 anacrontab
+-rw-r--r--   1 root root     433 окт  2  2017 apg.conf
+drwxr-xr-x   5 root root    4096 фев 23 15:48 apm
+drwxr-xr-x   3 root root    4096 фев 23 15:50 apparmor
+drwxr-xr-x   6 root root    4096 мар 15 16:31 apparmor.d
+drwxr-xr-x   4 root root    4096 фев 23 15:50 apport
+-rw-r--r--   1 root root     769 янв 19  2020 appstream.conf
+drwxr-xr-x   7 root root    4096 мар 15 15:47 apt
+drwxr-xr-x   3 root root    4096 фев 23 15:50 avahi
+-rw-r--r--   1 root root    2319 фев 25  2020 bash.bashrc
+-rw-r--r--   1 root root      45 янв 26  2020 bash_completion
+drwxr-xr-x   2 root root    4096 фев 23 15:50 bash_completion.d
+-rw-r--r--   1 root root     367 апр 15  2020 bindresvport.blacklist
+drwxr-xr-x   2 root root    4096 апр 22  2020 binfmt.d
+drwxr-xr-x   2 root root    4096 фев 23 15:50 bluetooth
+-rw-r-----   1 root root      33 фев 23 15:50 brlapi.key
+drwxr-xr-x   7 root root    4096 фев 23 15:50 brltty
+-rw-r--r--   1 root root   26916 мар  4  2020 brltty.conf
+drwxr-xr-x   3 root root    4096 фев 23 15:47 ca-certificates
+-rw-r--r--   1 root root    6570 фев 23 15:47 ca-certificates.conf
+-rw-r--r--   1 root root    5713 фев 23 15:47 ca-certificates.conf.dpkg-old
+drwxr-xr-x   2 root root    4096 фев 23 15:50 calendar
+drwxr-s---   2 root dip     4096 фев 23 15:50 chatscripts
+drwxr-xr-x   2 root root    4096 мар 15 15:44 console-setup
+drwxr-xr-x   2 root root    4096 фев 23 15:50 cracklib
+drwxr-xr-x   2 root root    4096 мар 15 15:46 cron.d
+drwxr-xr-x   2 root root    4096 фев 23 15:51 cron.daily
+drwxr-xr-x   2 root root    4096 фев 23 15:47 cron.hourly
+drwxr-xr-x   2 root root    4096 фев 23 15:50 cron.monthly
+-rw-r--r--   1 root root    1042 фев 14  2020 crontab
+drwxr-xr-x   2 root root    4096 фев 23 15:51 cron.weekly
+drwxr-xr-x   5 root lp      4096 апр  1 22:44 cups
+drwxr-xr-x   2 root root    4096 фев 23 15:50 cupshelpers
+drwxr-xr-x   4 root root    4096 фев 23 15:47 dbus-1
+drwxr-xr-x   4 root root    4096 фев 23 15:49 dconf
+-rw-r--r--   1 root root    2969 авг  3  2019 debconf.conf
+-rw-r--r--   1 root root      13 дек  5  2019 debian_version
+drwxr-xr-x   3 root root    4096 мар 22 01:13 default
+-rw-r--r--   1 root root     604 сен 16  2018 deluser.conf
+drwxr-xr-x   2 root root    4096 мар 15 20:42 depmod.d
+drwxr-xr-x   4 root root    4096 фев 23 15:47 dhcp
+drwxr-xr-x   2 root root    4096 мар 15 15:46 dictionaries-common
+drwxr-xr-x   4 root root    4096 мар 15 16:37 dkms
+drwxr-xr-x   4 root root    4096 мар 15 16:37 dpkg
+-rw-r--r--   1 root root     685 фев 14  2020 e2scrub.conf
+drwxr-xr-x   3 root root    4096 фев 23 15:48 emacs
+-rw-r--r--   1 root root     106 фев 23 15:47 environment
+drwxr-xr-x   2 root root    4096 фев 23 15:50 environment.d
+-rw-r--r--   1 root root    1816 дек 27  2019 ethertypes
+drwxr-xr-x   3 root root    4096 мар 15 16:31 firefox
+drwxr-xr-x   4 root root    4096 фев 23 15:50 fonts
+-rw-r--r--   1 root root      20 янв 13  2021 fprintd.conf
+-rw-rw-r--   1 root root     665 мар 15 15:42 fstab
+-rw-r--r--   1 root root     280 июн 20  2014 fuse.conf
+drwxr-xr-x   3 root root    4096 мар 15 16:31 fwupd
+-rw-r--r--   1 root root    2584 фев  1  2020 gai.conf
+-rw-r--r--   1 root root    4372 мая 18  2020 gamemode.ini
+drwxr-xr-x   2 root root    4096 фев 23 15:50 gdb
+drwxr-xr-x   8 root root    4096 фев 23 15:51 gdm3
+drwxr-xr-x   2 root root    4096 фев 23 15:51 geoclue
+drwxr-xr-x   4 root root    4096 фев 23 15:48 ghostscript
+drwxr-xr-x   3 root root    4096 фев 23 15:48 glvnd
+drwxr-xr-x   2 root root    4096 фев 23 15:50 gnome
+drwxr-xr-x   2 root root    4096 фев 23 15:50 groff
+-rw-r--r--   1 root root    1271 апр  1 22:39 group
+-rw-r--r--   1 root root    1257 апр  1 22:39 group-
+drwxr-xr-x   2 root root    4096 мар 15 16:31 grub.d
+-rw-r-----   1 root shadow  1018 апр  1 22:39 gshadow
+-rw-r-----   1 root shadow  1008 апр  1 22:39 gshadow-
+drwxr-xr-x   3 root root    4096 фев 23 15:48 gss
+drwxr-xr-x   2 root root    4096 фев 23 15:50 gtk-2.0
+drwxr-xr-x   2 root root    4096 мар 15 16:31 gtk-3.0
+-rw-r--r--   1 root root    5060 авг 21  2019 hdparm.conf
+-rw-r--r--   1 root root      92 дек  5  2019 host.conf
+-rw-r--r--   1 root root       4 фев 23 15:52 hostid
+-rw-r--r--   1 root root      16 мар 15 15:44 hostname
+-rw-r--r--   1 root root     230 мар 15 15:44 hosts
+-rw-r--r--   1 root root     411 фев 23 15:50 hosts.allow
+-rw-r--r--   1 root root     711 фев 23 15:50 hosts.deny
+drwxr-xr-x   2 root root    4096 фев 23 15:50 hp
+drwxr-xr-x   3 root root    4096 фев 23 15:49 ifplugd
+drwxr-xr-x   2 root root    4096 мар 15 15:46 init
+drwxr-xr-x   2 root root    4096 мар 22 01:13 init.d
+drwxr-xr-x   5 root root    4096 фев 23 15:50 initramfs-tools
+-rw-r--r--   1 root root    1748 фев 25  2020 inputrc
+drwxr-xr-x   2 root root    4096 фев 23 15:51 insserv.conf.d
+drwxr-xr-x   4 root root    4096 фев 23 15:47 iproute2
+-rw-r--r--   1 root root      26 фев 17 07:44 issue
+-rw-r--r--   1 root root      19 фев 17 07:44 issue.net
+drwxr-xr-x   8 root root    4096 мар 15 16:37 kernel
+-rw-r--r--   1 root root     110 мар 15 15:45 kernel-img.conf
+-rw-r--r--   1 root root    1308 дек  2  2017 kerneloops.conf
+drwxr-xr-x   2 root root    4096 фев 23 15:50 ldap
+-rw-r--r--   1 root root   67086 мар 25 20:56 ld.so.cache
+-rw-r--r--   1 root root      34 апр 15  2020 ld.so.conf
+drwxr-xr-x   2 root root    4096 мар 15 16:37 ld.so.conf.d
+-rw-r--r--   1 root root     267 дек  5  2019 legal
+-rw-r--r--   1 root root      27 янв 19  2018 libao.conf
+-rw-r--r--   1 root root     191 фев 18  2020 libaudit.conf
+drwxr-xr-x   3 root root    4096 фев 23 15:49 libblockdev
+drwxr-xr-x   2 root root    4096 фев 23 15:50 libnl-3
+drwxr-xr-x   2 root root    4096 июн 26  2019 libpaper.d
+drwxr-xr-x   2 root root    4096 фев 23 15:51 libreoffice
+-rw-r--r--   1 root root    2996 апр 15  2020 locale.alias
+-rw-r--r--   1 root root    9438 мар 15 16:30 locale.gen
+lrwxrwxrwx   1 root root      36 мар 15 15:44 localtime -> /usr/share/zoneinfo/Asia/Krasnoyarsk
+drwxr-xr-x   4 root root    4096 фев 23 15:48 logcheck
+-rw-r--r--   1 root root   10550 фев  7  2020 login.defs
+-rw-r--r--   1 root root     533 янв 21  2019 logrotate.conf
+drwxr-xr-x   2 root root    4096 мар 15 15:46 logrotate.d
+-rw-r--r--   1 root root     104 фев 17 07:44 lsb-release
+-rw-r--r--   1 root root   14867 фев  1  2019 ltrace.conf
+-r--r--r--   1 root root      33 мар 15 15:48 machine-id
+-rw-r--r--   1 root root     111 янв 17  2020 magic
+-rw-r--r--   1 root root     111 янв 17  2020 magic.mime
+-rw-r--r--   1 root root   41950 мар 25 20:56 mailcap
+-rw-r--r--   1 root root     449 окт 19  2019 mailcap.order
+-rw-r--r--   1 root root    5215 фев 26  2020 manpath.config
+drwxr-xr-x   2 root root    4096 мар 25 20:56 mc
+-rw-r--r--   1 root root   24546 окт 19  2019 mime.types
+-rw-r--r--   1 root root     808 фев 14  2020 mke2fs.conf
+drwxr-xr-x   2 root root    4096 мар 15 16:37 modprobe.d
+-rw-r--r--   1 root root     195 фев 23 15:47 modules
+drwxr-xr-x   2 root root    4096 фев 23 15:50 modules-load.d
+lrwxrwxrwx   1 root root      19 мар 15 15:44 mtab -> ../proc/self/mounts
+-rw-r--r--   1 root root     624 мар 22  2020 mtools.conf
+drwxr-xr-x   3 root root    4096 фев 23 15:50 mysql
+-rw-r--r--   1 root root   10037 фев  7  2020 nanorc
+drwxr-xr-x   2 root root    4096 фев 23 15:55 netplan
+drwxr-xr-x   6 root root    4096 фев 23 15:49 network
+drwxr-xr-x   8 root root    4096 фев 23 15:47 networkd-dispatcher
+drwxr-xr-x   7 root root    4096 фев 23 15:50 NetworkManager
+-rw-r--r--   1 root root      91 дек  5  2019 networks
+drwxr-xr-x   2 root root    4096 фев 23 15:47 newt
+-rw-r--r--   1 root root     542 мар 15 15:47 nsswitch.conf
+drwxr-xr-x   4 root root    4096 фев 23 15:50 openvpn
+drwxr-xr-x   2 root root    4096 фев 23 15:47 opt
+lrwxrwxrwx   1 root root      21 мар 15 15:42 os-release -> ../usr/lib/os-release
+drwxr-xr-x   2 root root    4096 фев 23 15:51 PackageKit
+-rw-r--r--   1 root root     552 дек 17  2019 pam.conf
+drwxr-xr-x   2 root root    4096 мар 22 01:13 pam.d
+-rw-rw-r--   1 root root       3 мар 15 15:45 papersize
+-rw-r--r--   1 root root    3275 апр  1 22:39 passwd
+-rw-r--r--   1 root root    3242 апр  1 22:39 passwd-
+drwxr-xr-x   2 root root    4096 фев 23 15:50 pcmcia
+drwxr-xr-x   3 root root    4096 фев 23 15:48 perl
+drwxr-xr-x   4 root root    4096 фев 23 15:49 pki
+drwxr-xr-x   3 root root    4096 фев 23 15:49 pm
+-rw-r--r--   1 root root    7649 фев 23 15:50 pnm2ppa.conf
+drwxr-xr-x   4 root root    4096 фев 23 15:48 polkit-1
+-rw-rw-r--   1 root root     350 мар 15 15:45 popularity-contest.conf
+drwxr-xr-x   7 root dip     4096 фев 23 15:50 ppp
+-rw-r--r--   1 root root     581 дек  5  2019 profile
+drwxr-xr-x   2 root root    4096 мар 15 16:29 profile.d
+-rw-r--r--   1 root root    2932 апр  2  2013 protocols
+drwxr-xr-x   3 root root    4096 фев 23 15:51 pulse
+-rw-------   1 root root       0 фев 23 15:47 .pwd.lock
+drwxr-xr-x   2 root root    4096 фев 23 15:47 python3
+drwxr-xr-x   2 root root    4096 фев 23 15:47 python3.8
+drwxr-xr-x   2 root root    4096 мар 15 15:46 rc0.d
+drwxr-xr-x   2 root root    4096 мар 15 15:46 rc1.d
+drwxr-xr-x   2 root root    4096 мар 22 01:13 rc2.d
+drwxr-xr-x   2 root root    4096 мар 22 01:13 rc3.d
+drwxr-xr-x   2 root root    4096 мар 22 01:13 rc4.d
+drwxr-xr-x   2 root root    4096 мар 22 01:13 rc5.d
+drwxr-xr-x   2 root root    4096 мар 15 15:46 rc6.d
+drwxr-xr-x   2 root root    4096 мар 15 15:46 rcS.d
+lrwxrwxrwx   1 root root      39 мар 15 15:44 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx   1 root root      13 мар 15 15:42 rmt -> /usr/sbin/rmt
+-rw-r--r--   1 root root     887 апр  2  2013 rpc
+-rw-r--r--   1 root root    1382 фев 11  2020 rsyslog.conf
+drwxr-xr-x   2 root root    4096 фев 23 15:50 rsyslog.d
+-rw-r--r--   1 root root    5211 мар 11  2020 rygel.conf
+drwxr-xr-x   3 root root    4096 фев 23 15:50 sane.d
+drwxr-xr-x   4 root root    4096 фев 23 15:50 security
+drwxr-xr-x   2 root root    4096 фев 23 15:47 selinux
+-rw-r--r--   1 root root   10593 ноя  7  2019 sensors3.conf
+drwxr-xr-x   2 root root    4096 фев 23 15:50 sensors.d
+-rw-r--r--   1 root root   14464 фев 17  2020 services
+drwxr-xr-x   3 root root    4096 фев 23 15:51 sgml
+-rw-r-----   1 root shadow  2145 апр  1 22:39 shadow
+-rw-r-----   1 root shadow  2121 апр  1 22:39 shadow-
+-rw-r--r--   1 root root     116 фев 23 15:47 shells
+drwxr-xr-x   2 root root    4096 фев 23 15:47 skel
+drwxr-xr-x   2 root root    4096 фев 23 15:50 snmp
+drwxr-xr-x   4 root root    4096 фев 23 15:50 speech-dispatcher
+drwxr-xr-x   4 root root    4096 мар 27 22:19 ssh
+drwxr-xr-x   4 root root    4096 мар 15 16:31 ssl
+-rw-r--r--   1 root root     171 апр  1 22:39 subgid
+-rw-r--r--   1 root root     155 апр  1 22:39 subgid-
+-rw-r--r--   1 root root     171 апр  1 22:39 subuid
+-rw-r--r--   1 root root     155 апр  1 22:39 subuid-
+-r--r-----   1 root root     755 фев  3  2020 sudoers
+drwxr-xr-x   2 root root    4096 мар 15 15:46 sudoers.d
+-rw-r--r--   1 root root    2351 фев 14  2020 sysctl.conf
+drwxr-xr-x   2 root root    4096 фев 23 15:47 sysctl.d
+drwxr-xr-x   5 root root    4096 фев 23 15:47 systemd
+drwxr-xr-x   2 root root    4096 фев 23 15:47 terminfo
+drwxr-xr-x   2 root root    4096 фев 23 15:50 thermald
+drwxr-xr-x   2 root root    4096 фев 23 15:51 thunderbird
+-rw-r--r--   1 root root      17 мар 15 15:44 timezone
+drwxr-xr-x   2 root root    4096 апр 22  2020 tmpfiles.d
+drwxr-xr-x   2 root root    4096 фев 23 15:47 ubuntu-advantage
+-rw-r--r--   1 root root    1260 дек 14  2018 ucf.conf
+drwxr-xr-x   4 root root    4096 фев 23 15:47 udev
+drwxr-xr-x   2 root root    4096 фев 23 15:50 udisks2
+drwxr-xr-x   3 root root    4096 фев 23 15:50 ufw
+drwxr-xr-x   3 root root    4096 фев 23 15:51 update-manager
+drwxr-xr-x   2 root root    4096 мар 15 16:31 update-motd.d
+drwxr-xr-x   2 root root    4096 дек  3 07:19 update-notifier
+drwxr-xr-x   2 root root    4096 фев 23 15:50 UPower
+-rw-r--r--   1 root root    1523 фев 10  2020 usb_modeswitch.conf
+drwxr-xr-x   2 root root    4096 фев 25  2020 usb_modeswitch.d
+drwxr-xr-x   2 root root    4096 фев 23 15:47 vim
+lrwxrwxrwx   1 root root      23 мар 15 15:42 vtrgb -> /etc/alternatives/vtrgb
+drwxr-xr-x   5 root root    4096 фев 23 15:48 vulkan
+-rw-r--r--   1 root root    4942 ноя 13 00:09 wgetrc
+drwxr-xr-x   2 root root    4096 фев 23 15:50 wpa_supplicant
+drwxr-xr-x  11 root root    4096 фев 23 15:51 X11
+-rw-r--r--   1 root root     642 сен 24  2019 xattr.conf
+drwxr-xr-x   6 root root    4096 фев 23 15:49 xdg
+drwxr-xr-x   2 root root    4096 фев 23 15:51 xml
+-rw-r--r--   1 root root     477 окт  7  2019 zsh_command_not_found
+user@user-VirtualBox:~/lesson6$ ls -la /etc | awk '{print $1}'
+total
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r-----
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-s---
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-rw-r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r-----
+-rw-r-----
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+lrwxrwxrwx
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+-r--r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+lrwxrwxrwx
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+lrwxrwxrwx
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-rw-r--
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-rw-r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-------
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+lrwxrwxrwx
+lrwxrwxrwx
+-rw-r--r--
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+-rw-r-----
+-rw-r-----
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-r--r-----
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+lrwxrwxrwx
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+drwxr-xr-x
+drwxr-xr-x
+-rw-r--r--
+user@user-VirtualBox:~/lesson6$ ls -la /etc | awk '{print $1}' | sort
+drwxr-s---
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+lrwxrwxrwx
+lrwxrwxrwx
+lrwxrwxrwx
+lrwxrwxrwx
+lrwxrwxrwx
+lrwxrwxrwx
+-r--r-----
+-r--r--r--
+-rw-------
+-rw-r-----
+-rw-r-----
+-rw-r-----
+-rw-r-----
+-rw-r-----
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-rw-r--
+-rw-rw-r--
+-rw-rw-r--
+total
+user@user-VirtualBox:~/lesson6$ ls -la /etc | awk '{print $1}' | sort | uniq
+drwxr-s---
+drwxr-xr-x
+lrwxrwxrwx
+-r--r-----
+-r--r--r--
+-rw-------
+-rw-r-----
+-rw-r--r--
+-rw-rw-r--
+total
+user@user-VirtualBox:~/lesson6$ 
+
+
+444444444444444444444444444444
+
+
+user@user-VirtualBox:~/lesson6$ sudo cat /var/log/syslog
+user@user-VirtualBox:~/lesson6$ sudo cat /var/log/syslog | grep start
+Mar 26 00:34:01 user-VirtualBox dnsmasq[9867]: FAILED to start up
+Mar 26 00:34:01 user-VirtualBox saned[9926]: saned (AF-indep+IPv6) from sane-backends 1.0.29 starting up
+Mar 26 00:34:02 user-VirtualBox whoopsie[9949]: whoopsie 0.2.69ubuntu0.3 starting up.
+Mar 26 00:34:10 user-VirtualBox dnsmasq[10398]: FAILED to start up
+Mar 26 00:37:52 user-VirtualBox dnsmasq[10708]: FAILED to start up
+Mar 26 00:37:52 user-VirtualBox saned[10767]: saned (AF-indep+IPv6) from sane-backends 1.0.29 starting up
+Mar 26 00:37:52 user-VirtualBox whoopsie[10790]: whoopsie 0.2.69ubuntu0.3 starting up.
+Mar 26 22:30:01 user-VirtualBox CRON[11220]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+Mar 26 23:30:01 user-VirtualBox CRON[11295]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+Mar 27 21:22:46 user-VirtualBox NetworkManager[562]: <info>  [1648390966.6916] device (enp0s3): Activation: starting connection 'Wired connection 1' (25ad22d1-b873-3afa-a6de-7ff2126653df)
+Mar 27 21:30:01 user-VirtualBox CRON[11412]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+Mar 27 22:30:01 user-VirtualBox CRON[12060]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+Mar 27 22:34:01 user-VirtualBox anacron[12152]: Anacron 2.3 started on 2022-03-27
+Mar 27 22:39:01 user-VirtualBox anacron[12152]: Job `cron.daily' started
+Mar 28 20:08:40 user-VirtualBox systemd[1]: Failed to start Refresh fwupd metadata and update motd.
+Mar 28 20:30:01 user-VirtualBox CRON[12304]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+Mar 28 21:30:01 user-VirtualBox CRON[12381]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+Binary file (standard input) matches
+user@user-VirtualBox:~/lesson6$ 
+
+
+
+
+
+
+
+55555555555555555555555555
+user@user-VirtualBox:~/lesson6$ date
+ser@user-VirtualBox:~/lesson6$ sudo at
+user@user-VirtualBox:~/lesson6$ sudo at 00:00
+[sudo] password for user: 
+warning: commands will be executed using /bin/sh
+at> sudo reboot 
+at>  <EOT><EOT>
+job 4 at Wed Apr  6 00:00:00 2022
+user@user-VirtualBox:~/lesson6$ 
+
+
+
+
+
+
+
+
+66666666666666666666666666666666
+user@user-VirtualBox:~$ cd /home/user/lesson6
+user@user-VirtualBox:~/lesson6$ nano backup.sh
+user@user-VirtualBox:~/lesson6$ mkdir backup
+user@user-VirtualBox:~/lesson6$ ls -la
+total 36
+drwxr-xr-x  4 user devel 4096 апр  5 00:09 .
+drwxr-xr-x 21 user devel 4096 апр  5 00:01 ..
+drwxr-xr-x  2 user devel 4096 апр  5 00:09 backup
+-rw-r--r--  1 user devel   45 апр  5 00:09 backup.sh
+drwxr-xr-x  3 user devel 4096 апр  4 23:35 lesson6
+-rwxr-xr-x  1 user devel  166 апр  4 23:31 script2.sh
+-rwxr-xr-x  1 user devel   70 апр  4 23:09 script.sh
+-rw-r--r--  1 user devel   67 апр  4 23:11 text2.txt
+-rw-r--r--  1 user devel   67 апр  4 23:02 text.txt
+user@user-VirtualBox:~/lesson6$ cd backup/
+user@user-VirtualBox:~/lesson6/backup$ ls -la
+total 8
+drwxr-xr-x 2 user devel 4096 апр  5 00:09 .
+drwxr-xr-x 4 user devel 4096 апр  5 00:09 ..
+user@user-VirtualBox:~/lesson6/backup$ crontab -e
+no crontab for user - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.basic
+  3. /usr/bin/mcedit
+  4. /usr/bin/vim.tiny
+  5. /bin/ed
+
+Choose 1-5 [1]: 1   
+crontab: installing new crontab
+user@user-VirtualBox:~/lesson6/backup$ ls -la
+total 8
+drwxr-xr-x 2 user devel 4096 апр  5 00:09 .
+drwxr-xr-x 4 user devel 4096 апр  5 00:09 ..
+user@user-VirtualBox:~/lesson6/backup$ ls -la
+total 8
+drwxr-xr-x 2 user devel 4096 апр  5 00:09 .
+drwxr-xr-x 4 user devel 4096 апр  5 00:09 ..
+user@user-VirtualBox:~/lesson6/backup$ cd
+user@user-VirtualBox:~$ cd /home/user/lesson6
+user@user-VirtualBox:~/lesson6$ sudo chmod +x backup.sh
+[sudo] password for user: 
+user@user-VirtualBox:~/lesson6$ ls -la
+total 36
+drwxr-xr-x  4 user devel 4096 апр  5 00:09 .
+drwxr-xr-x 21 user devel 4096 апр  5 00:10 ..
+drwxr-xr-x  2 user devel 4096 апр  5 00:09 backup
+-rwxr-xr-x  1 user devel   45 апр  5 00:09 backup.sh
+drwxr-xr-x  3 user devel 4096 апр  4 23:35 lesson6
+-rwxr-xr-x  1 user devel  166 апр  4 23:31 script2.sh
+-rwxr-xr-x  1 user devel   70 апр  4 23:09 script.sh
+-rw-r--r--  1 user devel   67 апр  4 23:11 text2.txt
+-rw-r--r--  1 user devel   67 апр  4 23:02 text.txt
+user@user-VirtualBox:~/lesson6$ cd backup/
+user@user-VirtualBox:~/lesson6/backup$ ls -la
+total 12
+drwxr-xr-x   3 user devel 4096 апр  5 00:18 .
+drwxr-xr-x   4 user devel 4096 апр  5 00:09 ..
+drwxr-xr-x 131 user devel 4096 апр  4 23:54 etc
+user@user-VirtualBox:~/lesson6/backup$ mc
+
+user@user-VirtualBox:~/lesson6/backup$ 
+

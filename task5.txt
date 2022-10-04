@@ -1,0 +1,550 @@
+11111111111111111111111111111111111
+
+
+<pre><font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~</b></font>$ mkdir lesson5
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~</b></font>$ cd lesson5
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ nano file1
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -1a
+<font color="#3465A4"><b>.</b></font>
+<font color="#3465A4"><b>..</b></font>
+file1
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ cp file1 file2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -1a
+<font color="#3465A4"><b>.</b></font>
+<font color="#3465A4"><b>..</b></font>
+file1
+file2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ nano file1
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ln -s file1 file3
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ln file1 file4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -1a
+<font color="#3465A4"><b>.</b></font>
+<font color="#3465A4"><b>..</b></font>
+file1
+file2
+<font color="#06989A"><b>file3</b></font>
+file4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -i1
+1711973 file1
+1711965 file2
+1711974 <font color="#06989A"><b>file3</b></font>
+1711973 file4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ rm file1
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -1a
+<font color="#3465A4"><b>.</b></font>
+<font color="#3465A4"><b>..</b></font>
+file2
+<span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span>
+
+
+
+
+
+
+22222222222222222222222222222222222222222222222
+
+
+file4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ cat file2
+Hello hello
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ cat file3
+cat: file3: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ cat file4
+Hello hello
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv file2 filefile2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mn file4 filefile4
+
+Command &apos;mn&apos; not found, but can be installed with:
+
+sudo apt install mininet
+
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv file4 filefile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -1a
+<font color="#3465A4"><b>.</b></font>
+<font color="#3465A4"><b>..</b></font>
+<span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span>
+filefile2
+filefile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ln -s filefile2 waytofile2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ln -s filefile4 waytofile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -1a
+<font color="#3465A4"><b>.</b></font>
+<font color="#3465A4"><b>..</b></font>
+<span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span>
+filefile2
+filefile4
+<font color="#06989A"><b>waytofile2</b></font>
+<font color="#06989A"><b>waytofile4</b></font>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mkdir ways
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv way*
+mv: target &apos;waytofile4&apos; is not a directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile2
+mv: missing destination file operand after &apos;waytofile2&apos;
+Try &apos;mv --help&apos; for more information.
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv link*
+mv: missing destination file operand after &apos;link*&apos;
+Try &apos;mv --help&apos; for more information.
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mkdir links
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv link*
+mv: missing destination file operand after &apos;links&apos;
+Try &apos;mv --help&apos; for more information.
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile2*
+mv: missing destination file operand after &apos;waytofile2&apos;
+Try &apos;mv --help&apos; for more information.
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv --help
+Usage: mv [OPTION]... [-T] SOURCE DEST
+  or:  mv [OPTION]... SOURCE... DIRECTORY
+  or:  mv [OPTION]... -t DIRECTORY SOURCE...
+Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+  -f, --force                  do not prompt before overwriting
+  -i, --interactive            prompt before overwrite
+  -n, --no-clobber             do not overwrite an existing file
+If you specify more than one of -i, -f, -n, only the final one takes effect.
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  move all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 move only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -Z, --context                set SELinux security context of destination
+                                 file to default type
+      --help     display this help and exit
+      --version  output version information and exit
+
+The backup suffix is &apos;~&apos;, unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+GNU coreutils online help: &lt;https://www.gnu.org/software/coreutils/&gt;
+Full documentation at: &lt;https://www.gnu.org/software/coreutils/mv&gt;
+or available locally via: info &apos;(coreutils) mv invocation&apos;
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 24
+drwxr-xr-x  4 user devel 4096 мар 31 22:26 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>file1</b></font></span>
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:26 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  2 user devel 4096 мар 31 22:24 <font color="#3465A4"><b>ways</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:23 <font color="#06989A"><b>waytofile2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:23 <font color="#06989A"><b>waytofile4</b></font> -&gt; filefile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile2 /lesson5/links/
+mv: cannot move &apos;waytofile2&apos; to &apos;/lesson5/links/&apos;: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mkdir links
+mkdir: cannot create directory ‘links’: File exists
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mkdir linkss
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -1a
+<font color="#3465A4"><b>.</b></font>
+<font color="#3465A4"><b>..</b></font>
+<span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span>
+filefile2
+filefile4
+<font color="#3465A4"><b>links</b></font>
+<font color="#3465A4"><b>linkss</b></font>
+<font color="#3465A4"><b>ways</b></font>
+<font color="#06989A"><b>waytofile2</b></font>
+<font color="#06989A"><b>waytofile4</b></font>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ln -s filefile2 link_to_file2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ln -s filefile4 link_to_file4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 мар 31 22:38 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>file1</b></font></span>
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:26 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  2 user devel 4096 мар 31 22:33 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:24 <font color="#3465A4"><b>ways</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:23 <font color="#06989A"><b>waytofile2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:23 <font color="#06989A"><b>waytofile4</b></font> -&gt; filefile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv link*
+mv: target &apos;link_to_file4&apos; is not a directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv links
+mv: missing destination file operand after &apos;links&apos;
+Try &apos;mv --help&apos; for more information.
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv links*
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 24
+drwxr-xr-x  4 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>file1</b></font></span>
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:24 <font color="#3465A4"><b>ways</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:23 <font color="#06989A"><b>waytofile2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:23 <font color="#06989A"><b>waytofile4</b></font> -&gt; filefile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ cd links
+bash: cd: links: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mkdir links
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv link*
+mv: target &apos;link_to_file4&apos; is not a directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile2 waytofile5 ways/
+mv: cannot stat &apos;waytofile5&apos;: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile2 waytofile4 ways/
+mv: cannot stat &apos;waytofile2&apos;: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile2 ways
+mv: cannot stat &apos;waytofile2&apos;: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile2 /ways
+mv: cannot stat &apos;waytofile2&apos;: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mv waytofile4 ways/
+mv: cannot stat &apos;waytofile4&apos;: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ln -s filefile2 filefile4
+ln: failed to create symbolic link &apos;filefile4&apos;: File exists
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 мар 31 22:43 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <span style="background-color:#2E3436"><font color="#CC0000"><b>file3</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>file1</b></font></span>
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:43 <font color="#3465A4"><b>ways</b></font>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ cd links
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$ ls -la
+total 8
+drwxr-xr-x 2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 5 user devel 4096 мар 31 22:43 <font color="#3465A4"><b>..</b></font>
+
+
+  command &apos;cde&apos; from deb cde (0.1+git9-g551e54d-1.1build1)
+  command &apos;cd5&apos; from deb cd5 (0.1-4)
+  command &apos;cdi&apos; from deb cdo (1.9.9~rc1-1)
+  command &apos;cdb&apos; from deb tinycdb (0.78build1)
+  command &apos;cdo&apos; from deb cdo (1.9.9~rc1-1)
+  command &apos;cdw&apos; from deb cdw (0.8.1-1build4)
+  command &apos;cdp&apos; from deb irpas (0.10-7)
+
+Try: sudo apt install &lt;deb name&gt;
+
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$ pwd
+
+
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$ /lesson5/
+bash: /lesson5/: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$ lesson5~
+lesson5~: command not found
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$ cd..
+cd..: command not found
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$  cd /lesson5
+bash: cd: /lesson5: No such file or directory
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$ pwd
+/home/user/lesson5/links
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/links</b></font>$ cd /home/user/lesson5
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ cd ways
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ls -la
+total 8
+drwxr-xr-x 2 user devel 4096 мар 31 22:43 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 5 user devel 4096 мар 31 22:43 <font color="#3465A4"><b>..</b></font>
+lrwxrwxrwx 1 user devel    9 мар 31 22:23 <span style="background-color:#2E3436"><font color="#CC0000"><b>waytofile2</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>filefile2</b></font></span>
+lrwxrwxrwx 1 user devel    9 мар 31 22:23 <span style="background-color:#2E3436"><font color="#CC0000"><b>waytofile4</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>filefile4</b></font></span>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ln -s /home/user/lesson5/waytofile2 newwaytofile2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ln -s /home/user/lesson5/waytofile4 newwaytofile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ls -la
+total 8
+drwxr-xr-x 2 user devel 4096 мар 31 23:07 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 5 user devel 4096 мар 31 22:43 <font color="#3465A4"><b>..</b></font>
+lrwxrwxrwx 1 user devel   29 мар 31 23:07 <span style="background-color:#2E3436"><font color="#CC0000"><b>newwaytofile2</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>/home/user/lesson5/waytofile2</b></font></span>
+lrwxrwxrwx 1 user devel   29 мар 31 23:07 <span style="background-color:#2E3436"><font color="#CC0000"><b>newwaytofile4</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>/home/user/lesson5/waytofile4</b></font></span>
+lrwxrwxrwx 1 user devel    9 мар 31 22:23 <span style="background-color:#2E3436"><font color="#CC0000"><b>waytofile2</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>filefile2</b></font></span>
+lrwxrwxrwx 1 user devel    9 мар 31 22:23 <span style="background-color:#2E3436"><font color="#CC0000"><b>waytofile4</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>filefile4</b></font></span>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ln -s /home/user/lesson5/filefile2  newwaytofile2
+ln: failed to create symbolic link &apos;newwaytofile2&apos;: File exists
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ln -s /home/user/lesson5/filefile2  newaytofile2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ln -s /home/user/lesson5/filefile4  newaytofile4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ ls -la
+total 8
+drwxr-xr-x 2 user devel 4096 мар 31 23:10 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 5 user devel 4096 мар 31 22:43 <font color="#3465A4"><b>..</b></font>
+lrwxrwxrwx 1 user devel   28 мар 31 23:10 <font color="#06989A"><b>newaytofile2</b></font> -&gt; /home/user/lesson5/filefile2
+lrwxrwxrwx 1 user devel   28 мар 31 23:10 <font color="#06989A"><b>newaytofile4</b></font> -&gt; /home/user/lesson5/filefile4
+lrwxrwxrwx 1 user devel   29 мар 31 23:07 <span style="background-color:#2E3436"><font color="#CC0000"><b>newwaytofile2</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>/home/user/lesson5/waytofile2</b></font></span>
+lrwxrwxrwx 1 user devel   29 мар 31 23:07 <span style="background-color:#2E3436"><font color="#CC0000"><b>newwaytofile4</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>/home/user/lesson5/waytofile4</b></font></span>
+lrwxrwxrwx 1 user devel    9 мар 31 22:23 <span style="background-color:#2E3436"><font color="#CC0000"><b>waytofile2</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>filefile2</b></font></span>
+lrwxrwxrwx 1 user devel    9 мар 31 22:23 <span style="background-color:#2E3436"><font color="#CC0000"><b>waytofile4</b></font></span> -&gt; <span style="background-color:#2E3436"><font color="#CC0000"><b>filefile4</b></font></span>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ pwd
+/home/user/lesson5/ways
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5/ways</b></font>$ cd /home/user/lesson5
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ 
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ touch file1
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ touch file2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 апр  1 21:44 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+-rw-r--r--  1 user devel    0 апр  1 21:44 file1
+-rw-r--r--  1 user devel    0 апр  1 21:44 file2
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <font color="#06989A"><b>file3</b></font> -&gt; file1
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 23:10 <font color="#3465A4"><b>ways</b></font>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ chmod go-rw file2
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 апр  1 21:44 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+-rw-r--r--  1 user devel    0 апр  1 21:44 file1
+-rw-------  1 user devel    0 апр  1 21:44 file2
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <font color="#06989A"><b>file3</b></font> -&gt; file1
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 23:10 <font color="#3465A4"><b>ways</b></font>
+
+
+
+
+
+
+33333333333333333333333333333333333333
+
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ touch file3
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 апр  1 21:44 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+-rw-r--r--  1 user devel    0 апр  1 21:48 file1
+-rw-------  1 user devel    0 апр  1 21:44 file2
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <font color="#06989A"><b>file3</b></font> -&gt; file1
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 23:10 <font color="#3465A4"><b>ways</b></font>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ chmod 600 file3
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 апр  1 21:44 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+-rw-------  1 user devel    0 апр  1 21:48 file1
+-rw-------  1 user devel    0 апр  1 21:44 file2
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <font color="#06989A"><b>file3</b></font> -&gt; file1
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 23:10 <font color="#3465A4"><b>ways</b></font>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ touch file4
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 апр  1 21:51 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+-rw-------  1 user devel    0 апр  1 21:48 file1
+-rw-------  1 user devel    0 апр  1 21:44 file2
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <font color="#06989A"><b>file3</b></font> -&gt; file1
+-rw-r--r--  1 user devel    0 апр  1 21:51 file4
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 23:10 <font color="#3465A4"><b>ways</b></font>
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ mc
+
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ :wq
+:wq: command not found
+
+<font color="#4E9A06"><b>user@user-VirtualBox</b></font>:<font color="#3465A4"><b>~/lesson5</b></font>$ ls -la
+total 28
+drwxr-xr-x  5 user devel 4096 апр  1 21:51 <font color="#3465A4"><b>.</b></font>
+drwxr-xr-x 19 user devel 4096 мар 31 22:14 <font color="#3465A4"><b>..</b></font>
+-rw-------  1 user devel    0 апр  1 21:48 file1
+-rw-------  1 user devel    0 апр  1 21:44 file2
+lrwxrwxrwx  1 user devel    5 мар 31 22:18 <font color="#06989A"><b>file3</b></font> -&gt; file1
+-rw-------  1 user devel    0 апр  1 21:51 file4
+-rw-r--r--  1 user devel   12 мар 31 22:17 filefile2
+-rw-r--r--  1 user devel   12 мар 31 22:16 filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 22:41 <font color="#3465A4"><b>links</b></font>
+drwxr-xr-x  3 user devel 4096 мар 31 22:39 <font color="#3465A4"><b>linkss</b></font>
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file2</b></font> -&gt; filefile2
+lrwxrwxrwx  1 user devel    9 мар 31 22:38 <font color="#06989A"><b>link_to_file4</b></font> -&gt; filefile4
+drwxr-xr-x  2 user devel 4096 мар 31 23:10 <font color="#3465A4"><b>ways</b></font>
+</pre>
+
+
+
+
+4444444444444
+
+
+
+user@user-VirtualBox:~$ sudo addgroup developer
+[sudo] password for user: 
+Adding group `developer' (GID 1011) ...
+Done.
+user@user-VirtualBox:~$ sudo usermod -aG developer user 
+user@user-VirtualBox:~$ sudo usermod -aG developer tom
+usermod: user 'tom' does not exist
+user@user-VirtualBox:~$ sudo usermod -aG developer elena
+usermod: user 'elena' does not exist
+user@user-VirtualBox:~$ ^C
+user@user-VirtualBox:~$ pwd
+/home/user
+user@user-VirtualBox:~$ sudo useradd -m -G developer tom
+user@user-VirtualBox:~$ sudo useradd -m -G developer to
+user@user-VirtualBox:~$ sudo useradd -m -G developer user
+useradd: user 'user' already exists
+user@user-VirtualBox:~$ cd..
+cd..: command not found
+user@user-VirtualBox:~$ cd ..
+user@user-VirtualBox:/home$ mkdir developer
+mkdir: cannot create directory ‘developer’: Permission denied
+user@user-VirtualBox:/home$ sudo !!
+sudo mkdir developer
+user@user-VirtualBox:/home$ ls -la
+total 52
+drwxr-xr-x 13 root   root   4096 апр  1 22:40 .
+drwxr-xr-x 20 root   root   4096 мар 15 15:44 ..
+drwxr-xr-x  2 root   root   4096 апр  1 22:40 developer
+drwxr-xr-x  2 to     to     4096 апр  1 22:39 to
+drwxr-xr-x  2 tom    tom    4096 апр  1 22:39 tom
+drwxr-xr-x 19 user   devel  4096 мар 31 22:14 user
+drwxr-xr-x  2 user10 group8 4096 мар 26 00:15 user10
+drwxr-xr-x  2 user2  user2  4096 мар 25 21:03 user2
+drwxr-xr-x  2 user3  user3  4096 мар 25 21:17 user3
+drwxr-xr-x  2 user4  user4  4096 мар 25 21:26 user44
+drwxr-xr-x  2 user5  devel  4096 мар 25 22:52 user5
+drwxr-xr-x  2 root   root   4096 мар 26 00:09 user6
+drwxr-xr-x  2 root   root   4096 мар 25 19:30 user77
+user@user-VirtualBox:/home$ sudo chown root:developer /home/developer/
+user@user-VirtualBox:/home$ ls -la
+total 52
+drwxr-xr-x 13 root   root      4096 апр  1 22:40 .
+drwxr-xr-x 20 root   root      4096 мар 15 15:44 ..
+drwxr-xr-x  2 root   developer 4096 апр  1 22:40 developer
+drwxr-xr-x  2 to     to        4096 апр  1 22:39 to
+drwxr-xr-x  2 tom    tom       4096 апр  1 22:39 tom
+drwxr-xr-x 19 user   devel     4096 мар 31 22:14 user
+drwxr-xr-x  2 user10 group8    4096 мар 26 00:15 user10
+drwxr-xr-x  2 user2  user2     4096 мар 25 21:03 user2
+drwxr-xr-x  2 user3  user3     4096 мар 25 21:17 user3
+drwxr-xr-x  2 user4  user4     4096 мар 25 21:26 user44
+drwxr-xr-x  2 user5  devel     4096 мар 25 22:52 user5
+drwxr-xr-x  2 root   root      4096 мар 26 00:09 user6
+drwxr-xr-x  2 root   root      4096 мар 25 19:30 user77
+user@user-VirtualBox:/home$ sudo chmod 777 /home/developer/
+user@user-VirtualBox:/home$ ls -la
+total 52
+drwxr-xr-x 13 root   root      4096 апр  1 22:40 .
+drwxr-xr-x 20 root   root      4096 мар 15 15:44 ..
+drwxrwxrwx  2 root   developer 4096 апр  1 22:40 developer
+drwxr-xr-x  2 to     to        4096 апр  1 22:39 to
+drwxr-xr-x  2 tom    tom       4096 апр  1 22:39 tom
+drwxr-xr-x 19 user   devel     4096 мар 31 22:14 user
+drwxr-xr-x  2 user10 group8    4096 мар 26 00:15 user10
+drwxr-xr-x  2 user2  user2     4096 мар 25 21:03 user2
+drwxr-xr-x  2 user3  user3     4096 мар 25 21:17 user3
+drwxr-xr-x  2 user4  user4     4096 мар 25 21:26 user44
+drwxr-xr-x  2 user5  devel     4096 мар 25 22:52 user5
+drwxr-xr-x  2 root   root      4096 мар 26 00:09 user6
+drwxr-xr-x  2 root   root      4096 мар 25 19:30 user77
+user@user-VirtualBox:/home$ sudo chmod 775 /home/developer/
+user@user-VirtualBox:/home$ ls -la
+total 52
+drwxr-xr-x 13 root   root      4096 апр  1 22:40 .
+drwxr-xr-x 20 root   root      4096 мар 15 15:44 ..
+drwxrwxr-x  2 root   developer 4096 апр  1 22:40 developer
+drwxr-xr-x  2 to     to        4096 апр  1 22:39 to
+drwxr-xr-x  2 tom    tom       4096 апр  1 22:39 tom
+drwxr-xr-x 19 user   devel     4096 мар 31 22:14 user
+drwxr-xr-x  2 user10 group8    4096 мар 26 00:15 user10
+drwxr-xr-x  2 user2  user2     4096 мар 25 21:03 user2
+drwxr-xr-x  2 user3  user3     4096 мар 25 21:17 user3
+drwxr-xr-x  2 user4  user4     4096 мар 25 21:26 user44
+drwxr-xr-x  2 user5  devel     4096 мар 25 22:52 user5
+drwxr-xr-x  2 root   root      4096 мар 26 00:09 user6
+drwxr-xr-x  2 root   root      4096 мар 25 19:30 user77
+user@user-VirtualBox:/home$ sudo chmod g+s /home/developer/
+user@user-VirtualBox:/home$ cd developer
+user@user-VirtualBox:/home/developer$ nano user.txt
+user@user-VirtualBox:/home/developer$ cd developer/
+bash: cd: developer/: No such file or directory
+user@user-VirtualBox:/home/developer$ nano user.txt
+user@user-VirtualBox:/home/developer$ ls -la
+total 8
+drwxrwsr-x  2 root developer 4096 апр  1 22:40 .
+drwxr-xr-x 13 root root      4096 апр  1 22:40 ..
+user@user-VirtualBox:/home/developer$ nano to.txt
+user@user-VirtualBox:/home/developer$ ls -la
+total 8
+drwxrwsr-x  2 root developer 4096 апр  1 22:40 .
+drwxr-xr-x 13 root root      4096 апр  1 22:40 ..
+user@user-VirtualBox:/home/developer$ pwd
+/home/developer
+user@user-VirtualBox:/home/developer$ nano tom.txt
+user@user-VirtualBox:/home/developer$ nano user.txt
+user@user-VirtualBox:/home/developer$ 
+
+
+
+
+
+
+
+
+
+555555555555555555555
+
+

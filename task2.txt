@@ -1,0 +1,612 @@
+Microsoft Windows [Version 10.0.22000.556]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\WINDOWS\system32>ssh user@192.168.8.102
+The authenticity of host '192.168.8.102 (192.168.8.102)' can't be established.
+ECDSA key fingerprint is SHA256:9d4z2pmA2lsuqGMdmnLnYS710wKJj3206STd7WLSe9A.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.8.102' (ECDSA) to the list of known hosts.
+user@192.168.8.102's password:
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-104-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed 16 Mar 2022 04:29:07 PM UTC
+
+  System load:  0.42               Processes:               130
+  Usage of /:   28.3% of 18.93GB   Users logged in:         1
+  Memory usage: 65%                IPv4 address for enp0s3: 192.168.8.102
+  Swap usage:   7%                 IPv4 address for enp0s8: 10.0.3.15
+
+
+19 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+user@ubundu2074:~$ w
+ 16:55:03 up  1:39,  2 users,  load average: 1.81, 1.85, 1.28
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+user     tty1     -                15:16   22.00s  0.29s  0.26s -bash
+user     pts/0    192.168.8.101    16:29    1.00s  0.06s  0.00s w
+
+user@ubundu2074:~$ nmcli
+
+Command 'nmcli' not found, but can be installed with:
+
+sudo apt install network-manager
+
+user@ubundu2074:~$ client_loop: send disconnect: Connection reset
+
+C:\WINDOWS\system32> ps au
+'ps' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32> ps af
+'ps' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32> ssh user@192.168.8.102
+user@192.168.8.102's password:
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-104-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri 18 Mar 2022 07:57:41 AM UTC
+
+  System load:  0.25               Processes:               134
+  Usage of /:   29.4% of 18.93GB   Users logged in:         1
+  Memory usage: 67%                IPv4 address for enp0s3: 192.168.8.102
+  Swap usage:   8%                 IPv4 address for enp0s8: 10.0.3.15
+
+
+20 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Wed Mar 16 16:29:10 2022 from 192.168.8.101
+user@ubundu2074:~$ ps x
+    PID TTY      STAT   TIME COMMAND
+   1581 ?        Ss     0:51 /lib/systemd/systemd --user
+   1583 ?        S      0:00 (sd-pam)
+   1590 tty1     S+     0:00 -bash
+ 246130 ?        S      0:00 sshd: user@pts/0
+ 246131 pts/0    Ss     0:00 -bash
+ 246242 pts/0    R+     0:00 ps x
+user@ubundu2074:~$ ps ax
+    PID TTY      STAT   TIME COMMAND
+      1 ?        Ss     1:45 /sbin/init maybe-ubiquity
+      2 ?        S      0:00 [kthreadd]
+      3 ?        I<     0:00 [rcu_gp]
+      4 ?        I<     0:00 [rcu_par_gp]
+      6 ?        I<     0:00 [kworker/0:0H-kblockd]
+      9 ?        I<     0:00 [mm_percpu_wq]
+     10 ?        S      0:13 [ksoftirqd/0]
+     11 ?        I      0:31 [rcu_sched]
+     12 ?        S      0:00 [migration/0]
+     13 ?        S      0:00 [idle_inject/0]
+     14 ?        S      0:00 [cpuhp/0]
+     15 ?        S      0:00 [kdevtmpfs]
+     16 ?        I<     0:00 [netns]
+     17 ?        S      0:00 [rcu_tasks_kthre]
+     18 ?        S      0:00 [kauditd]
+     19 ?        S      0:00 [khungtaskd]
+     20 ?        S      0:00 [oom_reaper]
+     21 ?        I<     0:00 [writeback]
+     22 ?        S      0:00 [kcompactd0]
+     23 ?        SN     0:00 [ksmd]
+     24 ?        SN     0:00 [khugepaged]
+     70 ?        I<     0:00 [kintegrityd]
+     71 ?        I<     0:00 [kblockd]
+     72 ?        I<     0:00 [blkcg_punt_bio]
+     73 ?        I<     0:00 [tpm_dev_wq]
+     74 ?        I<     0:00 [ata_sff]
+     75 ?        I<     0:00 [md]
+     76 ?        I<     0:00 [edac-poller]
+     77 ?        I<     0:00 [devfreq_wq]
+     78 ?        S      0:00 [watchdogd]
+     81 ?        S      0:24 [kswapd0]
+     82 ?        S      0:00 [ecryptfs-kthrea]
+     84 ?        I<     0:00 [kthrotld]
+     85 ?        I<     0:00 [acpi_thermal_pm]
+     86 ?        S      0:00 [scsi_eh_0]
+     87 ?        I<     0:00 [scsi_tmf_0]
+     88 ?        S      0:00 [scsi_eh_1]
+     89 ?        I<     0:00 [scsi_tmf_1]
+     91 ?        I<     0:00 [vfio-irqfd-clea]
+     93 ?        I<     0:00 [ipv6_addrconf]
+    102 ?        I<     0:00 [kstrp]
+    105 ?        I<     0:00 [kworker/u3:0]
+    118 ?        I<     0:00 [charger_manager]
+    119 ?        I<     0:15 [kworker/0:1H-kblockd]
+    158 ?        S      0:00 [scsi_eh_2]
+    159 ?        I<     0:00 [scsi_tmf_2]
+    160 ?        I<     0:00 [cryptd]
+    180 ?        S      0:02 [irq/18-vmwgfx]
+    182 ?        I<     0:00 [ttm_swap]
+    206 ?        I<     0:00 [kdmflush]
+    208 ?        I<     0:00 [kdmflush]
+    239 ?        I<     0:00 [raid5wq]
+    283 ?        S      0:10 [jbd2/dm-1-8]
+    284 ?        I<     0:00 [ext4-rsv-conver]
+    358 ?        S<s    0:14 /lib/systemd/systemd-journald
+    388 ?        Ss     0:02 /lib/systemd/systemd-udevd
+    407 ?        I<     0:00 [iprt-VBoxWQueue]
+    520 ?        I<     0:00 [kaluad]
+    521 ?        I<     0:00 [kmpath_rdacd]
+    522 ?        I<     0:00 [kmpathd]
+    523 ?        I<     0:00 [kmpath_handlerd]
+    524 ?        SLsl   0:01 /sbin/multipathd -d -s
+    534 ?        S<     0:00 [loop0]
+    536 ?        S<     0:00 [loop1]
+    539 ?        S<     0:00 [loop2]
+    542 ?        S      0:00 [jbd2/sda2-8]
+    543 ?        I<     0:00 [ext4-rsv-conver]
+    778 ?        Ss     0:00 /lib/systemd/systemd-resolved
+    814 ?        Ssl    0:01 /usr/lib/accountsservice/accounts-daemon
+    821 ?        Ss     0:00 /usr/sbin/cron -f
+    822 ?        Ss     0:22 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+    828 ?        Ss     0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    831 ?        Ssl    0:03 /usr/sbin/rsyslogd -n -iNONE
+    832 ?        Ssl    0:55 /usr/lib/snapd/snapd
+    833 ?        Ss     0:09 /lib/systemd/systemd-logind
+    835 ?        Ssl    0:17 /usr/lib/udisks2/udisksd
+    836 ?        Ss     0:00 /usr/sbin/atd -f
+    911 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-sign    917 ?        Ssl    0:00 /usr/lib/policykit-1/polkitd --no-debug
+   1454 tty1     Ss     0:00 /bin/login -p --
+   1581 ?        Ss     0:51 /lib/systemd/systemd --user
+   1583 ?        S      0:00 (sd-pam)
+   1590 tty1     S+     0:00 -bash
+   1723 ?        S<     0:00 [loop3]
+   1859 ?        S<     0:06 [loop4]
+   2979 ?        Ssl   10:22 /snap/microk8s/3021/bin/k8s-dqlite --storage-dir=/var/snap/microk8s/3021/var/kubernetes/bac   3117 ?        Ss     0:00 /bin/bash /snap/microk8s/3021/run-cluster-agent-with-args
+   3124 ?        Ss     0:17 /bin/bash /snap/microk8s/3021/apiservice-kicker
+   3178 ?        S      0:05 python3 /snap/microk8s/3021/usr/bin/gunicorn3 cluster.agent:app --bind 0.0.0.0:25000 --keyf   3279 ?        S      0:00 bpfilter_umh
+   3345 ?        I<     0:00 [dio/dm-1]
+  44241 ?        Ss     0:00 /lib/systemd/systemd-networkd
+  55759 ?        Ss     0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+  88858 ?        Sl     0:02 /usr/sbin/VBoxService --pidfile /var/run/vboxadd-service.sh
+ 149620 ?        Ssl    0:02 /usr/libexec/fwupd/fwupd
+ 149713 ?        Ssl    0:00 /usr/lib/upower/upowerd
+ 216586 ?        Ssl    0:16 /snap/microk8s/3021/bin/containerd --config /var/snap/microk8s/3021/args/containerd.toml -- 216688 ?        Ssl    2:57 /snap/microk8s/3021/kubelite --scheduler-args-file=/var/snap/microk8s/3021/args/kube-schedu 217129 ?        Sl     0:05 /snap/microk8s/3021/bin/containerd-shim-runc-v2 -namespace k8s.io -id 9cbd8a3b13668f0611281 217187 ?        Ss     0:00 /pause
+ 217714 ?        S      0:01 python3 /snap/microk8s/3021/usr/bin/gunicorn3 cluster.agent:app --bind 0.0.0.0:25000 --keyf 217732 ?        Ss     0:00 gpg-agent --homedir /var/lib/fwupd/gnupg --use-standard-socket --daemon
+ 218180 ?        Ss     0:00 /usr/local/bin/runsvdir -P /etc/service/enabled
+ 218338 ?        Sl     0:02 /snap/microk8s/3021/bin/containerd-shim-runc-v2 -namespace k8s.io -id b85034cb832e37b907b54 218359 ?        Ss     0:00 /pause
+ 218395 ?        Ssl    0:00 /usr/bin/kube-controllers
+ 218465 ?        Ss     0:00 runsv monitor-addresses
+ 218466 ?        Ss     0:00 runsv felix
+ 218467 ?        Ss     0:00 runsv allocate-tunnel-addrs
+ 218468 ?        Sl     0:00 calico-node -monitor-addresses
+ 218469 ?        Sl     0:00 calico-node -allocate-tunnel-addrs
+ 218470 ?        Sl     0:34 calico-node -felix
+ 230744 ?        I      0:00 [kworker/u2:0-events_unbound]
+ 231272 ?        I      0:01 [kworker/0:2-events]
+ 238509 ?        I      0:00 [kworker/u2:1-events_power_efficient]
+ 239975 ?        I      0:00 [kworker/0:1-kdmflush]
+ 242755 ?        I      0:00 [kworker/u2:2-events_power_efficient]
+ 244312 ?        I      0:00 [kworker/0:0-kdmflush]
+ 245959 ?        Ss     0:00 sshd: user [priv]
+ 246130 ?        S      0:00 sshd: user@pts/0
+ 246131 pts/0    Ss     0:00 -bash
+ 246519 ?        S      0:00 sleep 5
+ 246520 pts/0    R+     0:00 ps ax
+user@ubundu2074:~$ ps au
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        1454  0.0  0.1   5988  1708 tty1     Ss   03:28   0:00 /bin/login -p --
+user        1590  0.0  0.2   7072  2320 tty1     S+   03:28   0:00 -bash
+user      246131  0.1  0.5   8276  5032 pts/0    Ss   07:57   0:00 -bash
+user      246565  0.0  0.3   8888  3168 pts/0    R+   07:58   0:00 ps au
+user@ubundu2074:~$ ps a
+    PID TTY      STAT   TIME COMMAND
+   1454 tty1     Ss     0:00 /bin/login -p --
+   1590 tty1     S+     0:00 -bash
+ 246131 pts/0    Ss     0:00 -bash
+ 246704 pts/0    R+     0:00 ps a
+user@ubundu2074:~$ ps af
+    PID TTY      STAT   TIME COMMAND
+ 246131 pts/0    Ss     0:00 -bash
+ 247276 pts/0    R+     0:00  \_ ps af
+   1454 tty1     Ss     0:00 /bin/login -p --
+   1590 tty1     S+     0:00  \_ -bash
+user@ubundu2074:~$ echo $$
+246131
+user@ubundu2074:~$ client_loop: send disconnect: Connection reset
+
+C:\WINDOWS\system32> ssh user@192.168.8.102
+user@192.168.8.102's password:
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-104-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri 18 Mar 2022 02:27:13 PM UTC
+
+  System load:  0.5                Processes:               136
+  Usage of /:   30.7% of 18.93GB   Users logged in:         1
+  Memory usage: 65%                IPv4 address for enp0s3: 192.168.8.102
+  Swap usage:   6%                 IPv4 address for enp0s8: 10.0.3.15
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+20 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Fri Mar 18 07:57:42 2022 from 192.168.8.103
+
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$  pwd
+/home/user
+user@ubundu2074:~$ ls -a
+.  ..  .bash_history  .bash_logout  .bashrc  .cache  .config  .local  .profile  .ssh  .sudo_as_admin_successful
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$ cp /usr/local/etc/file /tmp/
+cp: cannot stat '/usr/local/etc/file': No such file or directory
+user@ubundu2074:~$ cp /usr/local/etc/file /tmp/
+cp: cannot stat '/usr/local/etc/file': No such file or directory
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$ ^Vm mmnmmmbnmmbgv
+cp: missing destination file operand after '/usr/local/etc/file'
+m: command not foundore information.
+user@ubundu2074:~$ cp
+user@ubundu2074:~$
+Try 'cp --help' for more information.
+user@ubundu2074:~$ cp --help
+Usage: cp [OPTION]... [-T] SOURCE DEST
+  or:  cp [OPTION]... SOURCE... DIRECTORY
+  or:  cp [OPTION]... -t DIRECTORY SOURCE...
+Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --archive                same as -dR --preserve=all
+      --attributes-only        don't copy the file data, just the attributes
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+      --copy-contents          copy contents of special files when recursive
+  -d                           same as --no-dereference --preserve=links
+  -f, --force                  if an existing destination file cannot be
+                                 opened, remove it and try again (this option
+                                 is ignored when the -n option is also used)
+  -i, --interactive            prompt before overwrite (overrides a previous -n
+                                  option)
+  -H                           follow command-line symbolic links in SOURCE
+  -l, --link                   hard link files instead of copying
+  -L, --dereference            always follow symbolic links in SOURCE
+  -n, --no-clobber             do not overwrite an existing file (overrides
+                                 a previous -i option)
+  -P, --no-dereference         never follow symbolic links in SOURCE
+  -p                           same as --preserve=mode,ownership,timestamps
+      --preserve[=ATTR_LIST]   preserve the specified attributes (default:
+                                 mode,ownership,timestamps), if possible
+                                 additional attributes: context, links, xattr,
+                                 all
+      --no-preserve=ATTR_LIST  don't preserve the specified attributes
+      --parents                use full source file name under DIRECTORY
+  -R, -r, --recursive          copy directories recursively
+      --reflink[=WHEN]         control clone/CoW copies. See below
+      --remove-destination     remove each existing destination file before
+                                 attempting to open it (contrast with --force)
+      --sparse=WHEN            control creation of sparse files. See below
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -s, --symbolic-link          make symbolic links instead of copying
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  copy all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 copy only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -x, --one-file-system        stay on this file system
+  -Z                           set SELinux security context of destination
+                                 file to default type
+      --context[=CTX]          like -Z, or if CTX is specified then set the
+                                 SELinux or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+By default, sparse SOURCE files are detected by a crude heuristic and the
+corresponding DEST file is made sparse as well.  That is the behavior
+selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST
+file whenever the SOURCE file contains a long enough sequence of zero bytes.
+Use --sparse=never to inhibit creation of sparse files.
+
+When --reflink[=always] is specified, perform a lightweight copy, where the
+data blocks are copied only when modified.  If this is not possible the copy
+fails, or if --reflink=auto is specified, fall back to a standard copy.
+Use --reflink=never to ensure a standard copy is performed.
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+As a special case, cp makes a backup of SOURCE when the force and backup
+options are given and SOURCE and DEST are the same name for an existing,
+regular file.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation at: <https://www.gnu.org/software/coreutils/cp>
+or available locally via: info '(coreutils) cp invocation'
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$ cp file file1
+cp: cannot stat 'file': No such file or directory
+user@ubundu2074:~$ touch
+touch: missing file operand
+Try 'touch --help' for more information.
+user@ubundu2074:~$ sudo touch
+[sudo] password for user:
+touch: missing file operand
+Try 'touch --help' for more information.
+user@ubundu2074:~$
+user@ubundu2074:~$ mkdir /home/user/dir1
+user@ubundu2074:~$ mkdir -p /home/user/dir1/dir2
+user@ubundu2074:~$ cat file
+cat: file: No such file or directory
+user@ubundu2074:~$ sudo apt install vim -y
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+vim is already the newest version (2:8.1.2269-1ubuntu5.7).
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+user@ubundu2074:~$ vim myfile
+user@ubundu2074:~$ nano myfile
+user@ubundu2074:~$ user@ubundu2074:~$ > rrrr.txt
+user@ubundu2074:~$ ls -lh rrrr.txt
+-rw-rw-r-- 1 user user 0 Mar 18 15:07 rrrr.txt
+user@ubundu2074:~$ touch rrrr1.txt
+user@ubundu2074:~$ ls -1h rrrr1.txt
+rrrr1.txt
+user@ubundu2074:~$ echo "itisgood - feel it cool" > rrrr2.txt
+user@ubundu2074:~$ ls -1h rrrr2.txt
+rrrr2.txt
+user@ubundu2074:~$ cat rrrr2.txt
+itisgood - feel it cool
+user@ubundu2074:~$ printf "test\n" rrrr3.txt
+test
+user@ubundu2074:~$ ls -1h rrrr3.txt
+ls: cannot access 'rrrr3.txt': No such file or directory
+user@ubundu2074:~$ cat rrrr3.txt
+cat: rrrr3.txt: No such file or directory
+user@ubundu2074:~$ printf "test2" >> rrrr3.txt
+user@ubundu2074:~$ cat rrrr2.txt
+itisgood - feel it cool
+user@ubundu2074:~$ cat rrrr3.txt
+test2user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$ cat > rr.txt
+
+
+
+
+ls
+
+
+
+^C
+user@ubundu2074:~$ ls -1h rr.txt
+rr.txt
+user@ubundu2074:~$ vim rrr.txt
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$ head -c OK /dev/zero > tt.txt
+head: invalid number of bytes: ‘OK’
+user@ubundu2074:~$ head -c 0K /dev/zero > tt.txt
+user@ubundu2074:~$ ls -1h tt.txt
+tt.txt
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$ tail - 0k /dev/zero > ttt.txt
+ls -1h ttt.txt
+
+
+
+^C
+user@ubundu2074:~$ touch test.txt
+user@ubundu2074:~$ install -D test.txt itsecforu/test.txt
+user@ubundu2074:~$ ls itsecforu/
+test.txt
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$
+user@ubundu2074:~$ rsync test.txt itsecforu/
+user@ubundu2074:~$ ls itsecforu/
+test.txt
+user@ubundu2074:~$ cd tmp1
+-bash: cd: tmp1: No such file or directory
+user@ubundu2074:~$ cd test.txt
+-bash: cd: test.txt: Not a directory
+user@ubundu2074:~$ cd
+user@ubundu2074:~$ /$
+-bash: /$: No such file or directory
+user@ubundu2074:~$ ~/$
+-bash: /home/user/$: No such file or directory
+user@ubundu2074:~$ cd~
+
+Command 'cd~' not found, did you mean:
+
+  command 'cdb' from deb tinycdb (0.78build1)
+  command 'cdi' from deb cdo (1.9.9~rc1-1)
+  command 'cdp' from deb irpas (0.10-7)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.1build1)
+  command 'cdo' from deb cdo (1.9.9~rc1-1)
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdw' from deb cdw (0.8.1-1build4)
+
+Try: sudo apt install <deb name>
+
+user@ubundu2074:~$ cd ~
+user@ubundu2074:~$
+user@ubundu2074:~$  cd /usr/local/bin
+user@ubundu2074:/usr/local/bin$
+user@ubundu2074:/usr/local/bin$ cd~
+
+Command 'cd~' not found, did you mean:
+
+  command 'cdp' from deb irpas (0.10-7)
+  command 'cdw' from deb cdw (0.8.1-1build4)
+  command 'cdb' from deb tinycdb (0.78build1)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.1build1)
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdi' from deb cdo (1.9.9~rc1-1)
+  command 'cdo' from deb cdo (1.9.9~rc1-1)
+
+Try: sudo apt install <deb name>
+
+C:\WINDOWS\system32>ssh user@192.168.8.102
+user@192.168.8.102's password:
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-104-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ System information disabled due to load higher than 1.0
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https://ubuntu.com/blog/microk8s-memory-optimisation
+
+20 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Fri Mar 18 14:27:15 2022 from 192.168.8.103
+user@ubundu2074:~$ touch ww.txt
+user@ubundu2074:~$ install -D source=file destination-directory
+install: cannot stat 'source=file': No such file or directory
+user@ubundu2074:~$ install -D ww.txt itsecforu/ww.txt
+user@ubundu2074:~$
+user@ubundu2074:~$ ls itsecforu
+test.txt  ww.txt
+user@ubundu2074:~$ cp --parents Downloads/qq.txt ~/Documents/
+cp: with --parents, the destination must be a directory
+Try 'cp --help' for more information.
+
+
+userbundu2074:~$ touch file.txt
+user@ubundu2074:~$ ls
+dir1      itsecforu  rrrr1.txt  rrrr3.txt  rrr.txt  test.txt  tt.txt
+file.txt  myfile     rrrr2.txt  rrrr.txt   rr.txt   ttt.txt   ww.txt
+user@ubundu2074:~$ echo '' > empty_file.txt
+user@ubundu2074:~$ ls
+dir1            file.txt   myfile     rrrr2.txt  rrrr.txt  rr.txt    ttt.txt  ww.txt
+empty_file.txt  itsecforu  rrrr1.txt  rrrr3.txt  rrr.txt   test.txt  tt.txt
+user@ubundu2074:~$ cat empty_file.txt
+
+user@ubundu2074:~$ mkdir LLL
+user@ubundu2074:~$ ls -F
+dir1/           file.txt    LLL/    rrrr1.txt  rrrr3.txt  rrr.txt  test.txt  tt.txt
+empty_file.txt  itsecforu/  myfile  rrrr2.txt  rrrr.txt   rr.txt   ttt.txt   ww.txt
+user@ubundu2074:~$ mkdir dir1 dir2
+mkdir: cannot create directory ‘dir1’: File exists
+user@ubundu2074:~$ mkdir dudu huhu
+user@ubundu2074:~$ mkdir -p /dudu/huhu
+mkdir: cannot create directory ‘/dudu’: Permission denied
+user@ubundu2074:~$ mkdir dir1
+mkdir: cannot create directory ‘dir1’: File exists
+user@ubundu2074:~$ mkdir dudu
+mkdir: cannot create directory ‘dudu’: File exists
+user@ubundu2074:~$ mkdir k
+user@ubundu2074:~$ mkdir k s
+mkdir: cannot create directory ‘k’: File exists
+user@ubundu2074:~$ mkdir t y
+user@ubundu2074:~$ mkdir -p /t/y
+mkdir: cannot create directory ‘/t’: Permission denied
+user@ubundu2074:~$ rmdir t
+user@ubundu2074:~$ rmdir y
+user@ubundu2074:~$ ls -F
+dir1/  empty_file.txt  itsecforu/  myfile     rrrr3.txt  rr.txt    ttt.txt
+dir2/  file.txt        k/          rrrr1.txt  rrrr.txt   s/        tt.txt
+dudu/  huhu/           LLL/        rrrr2.txt  rrr.txt    test.txt  ww.txt
+user@ubundu2074:~$ ls
+dir1  empty_file.txt  itsecforu  myfile     rrrr3.txt  rr.txt    ttt.txt
+dir2  file.txt        k          rrrr1.txt  rrrr.txt   s         tt.txt
+dudu  huhu            LLL        rrrr2.txt  rrr.txt    test.txt  ww.txt
+user@ubundu2074:~$ rm empty_file.txt
+user@ubundu2074:~$ ls
+dir1  file.txt   k       rrrr1.txt  rrrr.txt  s         tt.txt
+dir2  huhu       LLL     rrrr2.txt  rrr.txt   test.txt  ww.txt
+dudu  itsecforu  myfile  rrrr3.txt  rr.txt    ttt.txt
+user@ubundu2074:~$ rm -r huhu
+user@ubundu2074:~$ rm -r k LLL
+user@ubundu2074:~$ ls
+dir1  dudu      itsecforu  rrrr1.txt  rrrr3.txt  rrr.txt  s         ttt.txt  ww.txt
+dir2  file.txt  myfile     rrrr2.txt  rrrr.txt   rr.txt   test.txt  tt.txt
+user@ubundu2074:~$ mv rr uu
+mv: cannot stat 'rr': No such file or directory
+user@ubundu2074:~$ mv rr.txt uu.txt
+user@ubundu2074:~$ ls -F
+dir1/  dudu/     itsecforu/  rrrr1.txt  rrrr3.txt  rrr.txt  test.txt  tt.txt  ww.txt
+dir2/  file.txt  myfile      rrrr2.txt  rrrr.txt   s/       ttt.txt   uu.txt
+user@ubundu2074:~$ cp ww.txt dir2
+user@ubundu2074:~$ ls -F
+dir1/  dudu/     itsecforu/  rrrr1.txt  rrrr3.txt  rrr.txt  test.txt  tt.txt  ww.txt
+dir2/  file.txt  myfile      rrrr2.txt  rrrr.txt   s/       ttt.txt   uu.txt
+user@ubundu2074:~$ mv ww.txt dudu/
+user@ubundu2074:~$ ls -F
+dir1/  dudu/     itsecforu/  rrrr1.txt  rrrr3.txt  rrr.txt  test.txt  tt.txt
+dir2/  file.txt  myfile      rrrr2.txt  rrrr.txt   s/       ttt.txt   uu.txt
+user@ubundu2074:~$
+user@ubundu2074:~$ ls -F dudu/
+ww.txt
+user@ubundu2074:~$ cp -a dudu/ dir1/
+user@ubundu2074:~$ cp uu.txt dir1/
+user@ubundu2074:~$ ls -F dir1
+dir2/  dudu/  uu.txt
+user@ubundu2074:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/user/.ssh/id_rsa
+Your public key has been saved in /home/user/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:6AT4iC0rBA6d/fe3weOP0P+VoKywuLHSOmmLxTANKs8 user@ubundu2074
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+| . +             |
+|o.+ o            |
+|=ooo o .         |
+|==o.. + S    .   |
+|o=+  o . ..o. . .|
+|o Eoo...  oo*  ..|
+|. o= .+ o .+ *  .|
+| ..o=+.. .  +.o..|
++----[SHA256]-----+
+user@ubundu2074:~$ ssh-copy-id root@losst.ru
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/user/.ssh/id_rsa.pub"
+
+
+
+
+
+^C
+user@ubundu2074:~$ sudo vi/etc/ssh/sshd_config
+[sudo] password for user:
+sudo: vi/etc/ssh/sshd_config: command not found
+user@ubundu2074:~$ sudo vi /etc/ssh/sshd_config
+user@ubundu2074:~$
+user@ubundu2074:~$ sudo service ssh restart

@@ -1,0 +1,559 @@
+111111111111111111
+user@user-VirtualBox:~$ cat /etc/apt/
+cat: /etc/apt/: Is a directory
+user@user-VirtualBox:~$ cat  /etc/apt/sources.list | grep -v "#"
+
+deb http://ru.archive.ubuntu.com/ubuntu/ focal main restricted
+
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-updates main restricted
+
+deb http://ru.archive.ubuntu.com/ubuntu/ focal universe
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-updates universe
+
+deb http://ru.archive.ubuntu.com/ubuntu/ focal multiverse
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-updates multiverse
+
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+
+
+deb http://security.ubuntu.com/ubuntu focal-security main restricted
+deb http://security.ubuntu.com/ubuntu focal-security universe
+deb http://security.ubuntu.com/ubuntu focal-security multiverse
+deb http://nginx.org/packages/ubuntu focal nginx
+
+user@user-VirtualBox:~$ sudo vim /etc/apt/sources.list
+[sudo] password for user: 
+user@user-VirtualBox:~$ sudo apt update
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:2 http://nginx.org/packages/ubuntu focal InRelease [3 584 B]
+Hit:3 http://ru.archive.ubuntu.com/ubuntu focal InRelease       
+Get:4 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages [15,7 kB]
+Hit:5 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:6 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Fetched 19,3 kB in 9s (2 251 B/s)
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+84 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu focal InRelease' doesn't support architecture 'i386'
+user@user-VirtualBox:~$ curl -fsSL https://nginx.org/keys/nginx_signing.key
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+mQENBE5OMmIBCAD+FPYKGriGGf7NqwKfWC83cBV01gabgVWQmZbMcFzeW+hMsgxH
+W6iimD0RsfZ9oEbfJCPG0CRSZ7ppq5pKamYs2+EJ8Q2ysOFHHwpGrA2C8zyNAs4I
+QxnZZIbETgcSwFtDun0XiqPwPZgyuXVm9PAbLZRbfBzm8wR/3SWygqZBBLdQk5TE
+fDR+Eny/M1RVR4xClECONF9UBB2ejFdI1LD45APbP2hsN/piFByU1t7yK2gpFyRt
+97WzGHn9MV5/TL7AmRPM4pcr3JacmtCnxXeCZ8nLqedoSuHFuhwyDnlAbu8I16O5
+XRrfzhrHRJFM1JnIiGmzZi6zBvH0ItfyX6ttABEBAAG0KW5naW54IHNpZ25pbmcg
+a2V5IDxzaWduaW5nLWtleUBuZ2lueC5jb20+iQE+BBMBAgAoAhsDBgsJCAcDAgYV
+CAIJCgsEFgIDAQIeAQIXgAUCV2K1+AUJGB4fQQAKCRCr9b2Ce9m/YloaB/9XGrol
+kocm7l/tsVjaBQCteXKuwsm4XhCuAQ6YAwA1L1UheGOG/aa2xJvrXE8X32tgcTjr
+KoYoXWcdxaFjlXGTt6jV85qRguUzvMOxxSEM2Dn115etN9piPl0Zz+4rkx8+2vJG
+F+eMlruPXg/zd88NvyLq5gGHEsFRBMVufYmHtNfcp4okC1klWiRIRSdp4QY1wdrN
+1O+/oCTl8Bzy6hcHjLIq3aoumcLxMjtBoclc/5OTioLDwSDfVx7rWyfRhcBzVbwD
+oe/PD08AoAA6fxXvWjSxy+dGhEaXoTHjkCbz/l6NxrK3JFyauDgU4K4MytsZ1HDi
+MgMW8hZXxszoICTTiQEcBBABAgAGBQJOTkelAAoJEKZP1bF62zmo79oH/1XDb29S
+YtWp+MTJTPFEwlWRiyRuDXy3wBd/BpwBRIWfWzMs1gnCjNjk0EVBVGa2grvy9Jtx
+JKMd6l/PWXVucSt+U/+GO8rBkw14SdhqxaS2l14v6gyMeUrSbY3XfToGfwHC4sa/
+Thn8X4jFaQ2XN5dAIzJGU1s5JA0tjEzUwCnmrKmyMlXZaoQVrmORGjCuH0I0aAFk
+RS0UtnB9HPpxhGVbs24xXZQnZDNbUQeulFxS4uP3OLDBAeCHl+v4t/uotIad8v6J
+SO93vc1evIje6lguE81HHmJn9noxPItvOvSMb2yPsE8mH4cJHRTFNSEhPW6ghmlf
+Wa9ZwiVX5igxcvaIRgQQEQIABgUCTk5b0gAKCRDs8OkLLBcgg1G+AKCnacLb/+W6
+cflirUIExgZdUJqoogCeNPVwXiHEIVqithAM1pdY/gcaQZmIRgQQEQIABgUCTk5f
+YQAKCRCpN2E5pSTFPnNWAJ9gUozyiS+9jf2rJvqmJSeWuCgVRwCcCUFhXRCpQO2Y
+Va3l3WuB+rgKjsQ=
+=EWWI
+-----END PGP PUBLIC KEY BLOCK-----
+user@user-VirtualBox:~$ curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+OK
+user@user-VirtualBox:~$ sudo apt-key
+Usage: apt-key [--keyring file] [command] [arguments]
+
+Manage apt's list of trusted keys
+
+  apt-key add <file>          - add the key contained in <file> ('-' for stdin)
+  apt-key del <keyid>         - remove the key <keyid>
+  apt-key export <keyid>      - output the key <keyid>
+  apt-key exportall           - output all trusted keys
+  apt-key update              - update keys using the keyring package
+  apt-key net-update          - update keys using the network
+  apt-key list                - list keys
+  apt-key finger              - list fingerprints
+  apt-key adv                 - pass advanced options to gpg (download key)
+
+If no specific keyring file is given the command applies to all keyring files.
+user@user-VirtualBox:~$ sudo apt-key list
+/etc/apt/trusted.gpg
+--------------------
+pub   rsa2048 2011-08-19 [SC] [expires: 2024-06-14]
+      573B FD6B 3D8F BC64 1079  A6AB ABF5 BD82 7BD9 BF62
+uid           [ unknown] nginx signing key <signing-key@nginx.com>
+
+/etc/apt/trusted.gpg.d/ubuntu-keyring-2012-archive.gpg
+------------------------------------------------------
+pub   rsa4096 2012-05-11 [SC]
+      790B C727 7767 219C 42C8  6F93 3B4F E6AC C0B2 1F32
+uid           [ unknown] Ubuntu Archive Automatic Signing Key (2012) <ftpmaster@ubuntu.com>
+
+/etc/apt/trusted.gpg.d/ubuntu-keyring-2012-cdimage.gpg
+------------------------------------------------------
+pub   rsa4096 2012-05-11 [SC]
+      8439 38DF 228D 22F7 B374  2BC0 D94A A3F0 EFE2 1092
+uid           [ unknown] Ubuntu CD Image Automatic Signing Key (2012) <cdimage@ubuntu.com>
+
+/etc/apt/trusted.gpg.d/ubuntu-keyring-2018-archive.gpg
+------------------------------------------------------
+pub   rsa4096 2018-09-17 [SC]
+      F6EC B376 2474 EDA9 D21B  7022 8719 20D1 991B C93C
+uid           [ unknown] Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>
+
+user@user-VirtualBox:~$ sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease       
+Hit:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://nginx.org/packages/ubuntu focal InRelease          
+Err:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+  Cannot initiate the connection to security.ubuntu.com:80 (2620:2d:4000:1::19). - connect (101: Network is unreachable) Cannot initiate the connection to security.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to security.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to security.ubuntu.com:80 (2620:2d:4000:1::16). - connect (101: Network is unreachable) Could not connect to security.ubuntu.com:80 (91.189.91.38), connection timed out Could not connect to security.ubuntu.com:80 (185.125.190.36), connection timed out Could not connect to security.ubuntu.com:80 (185.125.190.39), connection timed out Could not connect to security.ubuntu.com:80 (91.189.91.39), connection timed out
+Reading package lists... Done                              
+Building dependency tree       
+Reading state information... Done
+84 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu focal InRelease' doesn't support architecture 'i386'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Cannot initiate the connection to security.ubuntu.com:80 (2620:2d:4000:1::19). - connect (101: Network is unreachable) Cannot initiate the connection to security.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to security.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to security.ubuntu.com:80 (2620:2d:4000:1::16). - connect (101: Network is unreachable) Could not connect to security.ubuntu.com:80 (91.189.91.38), connection timed out Could not connect to security.ubuntu.com:80 (185.125.190.36), connection timed out Could not connect to security.ubuntu.com:80 (185.125.190.39), connection timed out Could not connect to security.ubuntu.com:80 (91.189.91.39), connection timed out
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+user@user-VirtualBox:~$ sudo apt update
+[sudo] password for user: 
+Err:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease       
+  Temporary failure resolving 'ru.archive.ubuntu.com'
+Err:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+Err:3 http://nginx.org/packages/ubuntu focal InRelease          
+  Temporary failure resolving 'nginx.org'
+Hit:4 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+84 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: Failed to fetch http://ru.archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'ru.archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Failed to fetch http://nginx.org/packages/ubuntu/dists/focal/InRelease  Temporary failure resolving 'nginx.org'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ sudo apt-cache policy
+Package files:
+ 100 /var/lib/dpkg/status
+     release a=now
+ 500 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     release o=nginx,a=stable,n=focal,l=nginx,c=nginx,b=amd64
+     origin nginx.org
+ 500 http://security.ubuntu.com/ubuntu focal-security/multiverse i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=multiverse,b=i386
+     origin security.ubuntu.com
+ 500 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=multiverse,b=amd64
+     origin security.ubuntu.com
+ 500 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=universe,b=i386
+     origin security.ubuntu.com
+ 500 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=universe,b=amd64
+     origin security.ubuntu.com
+ 500 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=restricted,b=i386
+     origin security.ubuntu.com
+ 500 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=restricted,b=amd64
+     origin security.ubuntu.com
+ 500 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=main,b=i386
+     origin security.ubuntu.com
+ 500 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-security,n=focal,l=Ubuntu,c=main,b=amd64
+     origin security.ubuntu.com
+ 100 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-backports,n=focal,l=Ubuntu,c=universe,b=i386
+     origin ru.archive.ubuntu.com
+ 100 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-backports,n=focal,l=Ubuntu,c=universe,b=amd64
+     origin ru.archive.ubuntu.com
+ 100 http://ru.archive.ubuntu.com/ubuntu focal-backports/main i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-backports,n=focal,l=Ubuntu,c=main,b=i386
+     origin ru.archive.ubuntu.com
+ 100 http://ru.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-backports,n=focal,l=Ubuntu,c=main,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=multiverse,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=multiverse,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=universe,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=universe,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=restricted,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=restricted,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=main,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal-updates,n=focal,l=Ubuntu,c=main,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/multiverse i386 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=multiverse,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=multiverse,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/universe i386 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=universe,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=universe,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/restricted i386 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=restricted,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/restricted amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=restricted,b=amd64
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/main i386 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=main,b=i386
+     origin ru.archive.ubuntu.com
+ 500 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 Packages
+     release v=20.04,o=Ubuntu,a=focal,n=focal,l=Ubuntu,c=main,b=amd64
+     origin ru.archive.ubuntu.com
+Pinned packages:
+user@user-VirtualBox:~$ sudo apt-cache policy nginx
+nginx:
+  Installed: 1.18.0-0ubuntu1.2
+  Candidate: 1.20.2-1~focal
+  Version table:
+     1.20.2-1~focal 500
+        500 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     1.20.1-1~focal 500
+        500 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     1.20.0-1~focal 500
+        500 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     1.18.0-2~focal 500
+        500 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     1.18.0-1~focal 500
+        500 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+ *** 1.18.0-0ubuntu1.2 500
+        500 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+        500 http://ru.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages
+        500 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages
+        100 /var/lib/dpkg/status
+     1.17.10-0ubuntu1 500
+        500 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 Packages
+        500 http://ru.archive.ubuntu.com/ubuntu focal/main i386 Packages
+user@user-VirtualBox:~$ sudo apt-cache madison nginx
+     nginx | 1.20.2-1~focal | http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     nginx | 1.20.1-1~focal | http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     nginx | 1.20.0-1~focal | http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     nginx | 1.18.0-2~focal | http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     nginx | 1.18.0-1~focal | http://nginx.org/packages/ubuntu focal/nginx amd64 Packages
+     nginx | 1.18.0-0ubuntu1.2 | http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+     nginx | 1.18.0-0ubuntu1.2 | http://ru.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages
+     nginx | 1.18.0-0ubuntu1.2 | http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages
+     nginx | 1.18.0-0ubuntu1.2 | http://security.ubuntu.com/ubuntu focal-security/main i386 Packages
+     nginx | 1.17.10-0ubuntu1 | http://ru.archive.ubuntu.com/ubuntu focal/main amd64 Packages
+     nginx | 1.17.10-0ubuntu1 | http://ru.archive.ubuntu.com/ubuntu focal/main i386 Packages
+user@user-VirtualBox:~$ sudo apt install nginx
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libfwupdplugin1
+Use 'sudo apt autoremove' to remove it.
+The following packages will be REMOVED:
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream nginx-common nginx-core
+The following packages will be upgraded:
+  nginx
+1 upgraded, 0 newly installed, 6 to remove and 83 not upgraded.
+Need to get 879 kB of archives.
+After this operation, 983 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://nginx.org/packages/ubuntu focal/nginx amd64 nginx amd64 1.20.2-1~focal [879 kB]
+Fetched 879 kB in 12s (74,9 kB/s)
+dpkg: nginx-core: dependency problems, but removing anyway as you
+ requested:
+ nginx depends on nginx-core (<< 1.18.0-0ubuntu1.2.1~) | nginx-fu
+ll (<< 1.18.0-0ubuntu1.2.1~) | nginx-light (<< 1.18.0-0ubuntu1.2.
+1~) | nginx-extras (<< 1.18.0-0ubuntu1.2.1~); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+ nginx depends on nginx-core (>= 1.18.0-0ubuntu1.2) | nginx-full 
+(>= 1.18.0-0ubuntu1.2) | nginx-light (>= 1.18.0-0ubuntu1.2) | ngi
+nx-extras (>= 1.18.0-0ubuntu1.2); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+ nginx depends on nginx-core (<< 1.18.0-0ubuntu1.2.1~) | nginx-fu
+ll (<< 1.18.0-0ubuntu1.2.1~) | nginx-light (<< 1.18.0-0ubuntu1.2.
+1~) | nginx-extras (<< 1.18.0-0ubuntu1.2.1~); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+ nginx depends on nginx-core (>= 1.18.0-0ubuntu1.2) | nginx-full 
+(>= 1.18.0-0ubuntu1.2) | nginx-light (>= 1.18.0-0ubuntu1.2) | ngi
+nx-extras (>= 1.18.0-0ubuntu1.2); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+
+(Reading database ... 188313 files and directories currently inst
+alled.)
+Removing nginx-core (1.18.0-0ubuntu1.2) ...
+Removing libnginx-mod-http-image-filter (1.18.0-0ubuntu1.2) ...
+dpkg: nginx-common: dependency problems, but removing anyway as y
+ou requested:
+ libnginx-mod-stream depends on nginx-common (= 1.18.0-0ubuntu1.2
+).
+ libnginx-mod-mail depends on nginx-common (= 1.18.0-0ubuntu1.2).
+ libnginx-mod-http-xslt-filter depends on nginx-common (= 1.18.0-
+0ubuntu1.2).
+
+Removing nginx-common (1.18.0-0ubuntu1.2) ...
+(Reading database ... 188283 files and directories currently inst
+alled.)
+Preparing to unpack .../nginx_1.20.2-1~focal_amd64.deb ...
+Unpacking nginx (1.20.2-1~focal) over (1.18.0-0ubuntu1.2) ...
+(Reading database ... 188301 files and directories currently inst
+alled.)
+Removing libnginx-mod-stream (1.18.0-0ubuntu1.2) ...
+Removing libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.2) ...
+Removing libnginx-mod-mail (1.18.0-0ubuntu1.2) ...
+Setting up nginx (1.20.2-1~focal) ...
+Installing new version of config file /etc/default/nginx ...
+Installing new version of config file /etc/init.d/nginx ...
+Installing new version of config file /etc/logrotate.d/nginx ...
+Installing new version of config file /etc/nginx/mime.types ...
+Installing new version of config file /etc/nginx/nginx.conf ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.15) ...
+user@user-VirtualBox:~$ 
+
+ser@user-VirtualBox:~$ sudo systemctl start nginx.service
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ sudo systemctl start nginx.service
+user@user-VirtualBox:~$ sudo systemctl status nginx.service
+● nginx.service - nginx - high performance web server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled;>
+     Active: active (running) since Thu 2022-04-07 22:48:04 +07;>
+       Docs: https://nginx.org/en/docs/
+    Process: 9214 ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.>
+   Main PID: 9215 (nginx)
+      Tasks: 2 (limit: 4632)
+     Memory: 1.7M
+     CGroup: /system.slice/nginx.service
+             ├─9215 nginx: master process /usr/sbin/nginx -c /et>
+             └─9216 nginx: worker process
+
+апр 07 22:48:04 user-VirtualBox systemd[1]: Starting nginx - hig>
+апр 07 22:48:04 user-VirtualBox systemd[1]: nginx.service: Can't>
+апр 07 22:48:04 user-VirtualBox systemd[1]: Started nginx - high>
+
+
+user@user-VirtualBox:~$ sudo --remove nginx
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u
+            user] [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h
+            host] [-p prompt] [-T timeout] [-u user] [VAR=value]
+            [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h
+            host] [-p prompt] [-T timeout] [-u user] file ...
+user@user-VirtualBox:~$ sudo dpkg --remove nginx
+(Reading database ... 223325 files and directories currently installed.)
+Removing nginx (1.18.0-3ubuntu1+focal2) ...
+user@user-VirtualBox:~$ sudo dpkg --remove nginx-core
+dpkg: dependency problems prevent removal of nginx-core:
+ libnginx-mod-stream-geoip depends on nginx-core (= 1.18.0-3ubuntu1+focal2) | nginx-full (= 1.18.0-3ubuntu1+focal2) | nginx-light (= 1.18.0-3ubuntu1+focal2) | nginx-extras (= 1.18.0-3ubuntu1+focal2); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+ libnginx-mod-stream depends on nginx-core (= 1.18.0-3ubuntu1+focal2) | nginx-full (= 1.18.0-3ubuntu1+focal2) | nginx-light (= 1.18.0-3ubuntu1+focal2) | nginx-extras (= 1.18.0-3ubuntu1+focal2); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+ libnginx-mod-mail depends on nginx-core (= 1.18.0-3ubuntu1+focal2) | nginx-full (= 1.18.0-3ubuntu1+focal2) | nginx-light (= 1.18.0-3ubuntu1+focal2) | nginx-extras (= 1.18.0-3ubuntu1+focal2); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+ libnginx-mod-http-xslt-filter depends on nginx-core (= 1.18.0-3ubuntu1+focal2) | nginx-full (= 1.18.0-3ubuntu1+focal2) | nginx-light (= 1.18.0-3ubuntu1+focal2) | nginx-extras (= 1.18.0-3ubuntu1+focal2); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+ libnginx-mod-http-image-filter depends on nginx-core (= 1.18.0-3ubuntu1+focal2) | nginx-full (= 1.18.0-3ubuntu1+focal2) | nginx-light (= 1.18.0-3ubuntu1+focal2) | nginx-extras (= 1.18.0-3ubuntu1+focal2); however:
+  Package nginx-core is to be removed.
+  Package nginx-full is not installed.
+  Package nginx-light is not installed.
+  Package nginx-extras is not installed.
+
+dpkg: error processing package nginx-core (--remove):
+ dependency problems - not removing
+Errors were encountered while processing:
+ nginx-core
+user@user-VirtualBox:~$ sudo dpkg --remove nginx-common
+dpkg: dependency problems prevent removal of nginx-common:
+ nginx-core depends on nginx-common (= 1.18.0-3ubuntu1+focal2).
+ libnginx-mod-stream-geoip depends on nginx-common (= 1.18.0-3ubuntu1+focal2).
+ libnginx-mod-stream depends on nginx-common (= 1.18.0-3ubuntu1+focal2).
+ libnginx-mod-mail depends on nginx-common (= 1.18.0-3ubuntu1+focal2).
+ libnginx-mod-http-xslt-filter depends on nginx-common (= 1.18.0-3ubuntu1+focal2).
+ libnginx-mod-http-image-filter depends on nginx-common (= 1.18.0-3ubuntu1+focal2).
+
+dpkg: error processing package nginx-common (--remove):
+ dependency problems - not removing
+Errors were encountered while processing:
+ nginx-common
+user@user-VirtualBox:~$ sudo systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy ser>
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor>
+     Active: inactive (dead) since Fri 2022-04-08 21:58:37 +07; 6min ago
+       Docs: man:nginx(8)
+    Process: 33000 ExecStop=/sbin/start-stop-daemon --quiet --stop --re>
+   Main PID: 12134 (code=exited, status=0/SUCCESS)
+
+апр 08 00:11:22 user-VirtualBox systemd[1]: Starting A high performance>
+апр 08 00:11:23 user-VirtualBox systemd[1]: Started A high performance >
+апр 08 00:11:26 user-VirtualBox systemd[1]: Reloading A high performanc>
+апр 08 00:11:26 user-VirtualBox nginx[12553]: nginx: [emerg] dlopen() ">
+апр 08 00:11:26 user-VirtualBox systemd[1]: nginx.service: Control proc>
+апр 08 00:11:26 user-VirtualBox systemd[1]: Reload failed for A high pe>
+апр 08 21:58:37 user-VirtualBox systemd[1]: Stopping A high performance>
+апр 08 21:58:37 user-VirtualBox systemd[1]: nginx.service: Succeeded.
+апр 08 21:58:37 user-VirtualBox systemd[1]: Stopped A high performance >
+lines 1-16/16 (END)
+
+22222222222222222222222222222222
+
+user@user-VirtualBox:~$ snap find tetris
+Name                  Version              Publisher     Notes  Summary
+tetris                0.1.0                jogeanmcf     -      Tetris Game
+tetris-in-racket      1.2-2                brunonova     -      Tetris clone developed in Racket
+tetris-ever           20.21.11             joker2770     -      A simple tetris game is written with C, and is rendered by SDL2.
+tetris-ever-mixer     20.21.12             joker2770     -      A simple tetris game is written with C, and is rendered by SDL2.
+tetris-thefenriswolf  0.1.4.1              fenriswolf    -      A terminal interface for Tetris
+quadrapassel          40.2-30-g581c0fe945  canonical✓    -      Fit falling blocks together
+vitetris              0.57                 bladernr      -      Console based version of Tetris
+fairtris              3.0.0.4              chronoscz     -      A fair implementation of Classic Tetris® video game.
+awesome-pygames       20.21.12             joker2770     -      Games by Al Sweigart. Manual at inventwithpython.com/pygame.
+ctris                 1.1                  mitchel0022   -      An open source terminal based Tetris game
+stmg                  20210117             efanomars     -      Revisited classic games collection
+pmtris                1.0                  kz6fittycent  -      Poor Man's Tetris Clone
+free-games-webapp     0.9.8                maumx2        -      A simple Application that provides some we-based static games.
+simtetris             1                    piotr132      -      Simple version of tetris game
+user@user-VirtualBox:~$ sudo snap install tetris-ever
+tetris-ever 20.21.11 from Jintao Yang (joker2770) installed
+user@user-VirtualBox:~$ tetris-ever
+
+i_mode: 0
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+
+
+3333333333333333333333333333333333333
+
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ sudo ufw status
+Status: inactive
+
+user@user-VirtualBox:~$ sudo ufw allow 22
+Rules updated
+Rules updated (v6)
+user@user-VirtualBox:~$ sudo ufw allow 80
+Rules updated
+Rules updated (v6)
+user@user-VirtualBox:~$ sudo ufw enable 
+Firewall is active and enabled on system startup
+user@user-VirtualBox:~$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22                         ALLOW       Anywhere                  
+80                         ALLOW       Anywhere                  
+22 (v6)                    ALLOW       Anywhere (v6)             
+80 (v6)                    ALLOW       Anywhere (v6)             
+
+user@user-VirtualBox:~$ 
+
+
+
+
+44444444444444444444444444
+user@user-VirtualBox:~$ sudo systemctl -w net.ipv4.ip_forward=1
+systemctl: invalid option -- 'w'
+user@user-VirtualBox:~$ : sudo sysctl -w net.ipv4.ip_forward=1
+user@user-VirtualBox:~$ : sudo sysctl -w net.ipv4.ip_forward=1
+user@user-VirtualBox:~$ sudo iptables -t nat A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT
+Bad argument `A'
+Try `iptables -h' or 'iptables --help' for more information.
+user@user-VirtualBox:~$ sudo iptables -t nat A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+Bad argument `A'
+Try `iptables -h' or 'iptables --help' for more information.
+user@user-VirtualBox:~$ sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+user@user-VirtualBox:~$ sudo iptables -t nat -l
+iptables v1.8.4 (legacy): unknown option "-l"
+Try `iptables -h' or 'iptables --help' for more information.
+user@user-VirtualBox:~$ sudo iptables -t nat -L
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination         
+REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:http redir ports 8080
+
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain POSTROUTING (policy ACCEPT)
+target     prot opt source               destination         
+user@user-VirtualBox:~$ 
+
+
+
+

@@ -1,0 +1,380 @@
+user1user@user-VirtualBox:~$ sudo useradd -s /bin/bash -d /home/user6 -m user6
+[sudo] password for user: 
+user@user-VirtualBox:~$ sed 's/:.*//' /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+avahi-autoipd
+usbmux
+rtkit
+dnsmasq
+cups-pk-helper
+speech-dispatcher
+avahi
+kernoops
+saned
+nm-openvpn
+hplip
+whoopsie
+colord
+geoclue
+pulse
+gnome-initial-setup
+gdm
+sssd
+user
+systemd-coredump
+vboxadd
+sshd
+user2
+user3
+user4
+user5
+user6
+user@user-VirtualBox:~$ killall -9 -u user6
+user@user-VirtualBox:~$ sudo userdel --remove user6
+userdel: user6 mail spool (/var/mail/user6) not found
+user@user-VirtualBox:~$ sed 's/:.*//' /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+avahi-autoipd
+usbmux
+rtkit
+dnsmasq
+cups-pk-helper
+speech-dispatcher
+avahi
+kernoops
+saned
+nm-openvpn
+hplip
+whoopsie
+colord
+geoclue
+pulse
+gnome-initial-setup
+gdm
+sssd
+user
+systemd-coredump
+vboxadd
+sshd
+user2
+user3
+user4
+user5
+user@user-VirtualBox:~$ sudo mkdir /home/user6
+user@user-VirtualBox:~$ sudo vim /etc/passwd
+user@user-VirtualBox:~$ sed 's/:.*//' /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+avahi-autoipd
+usbmux
+rtkit
+dnsmasq
+cups-pk-helper
+speech-dispatcher
+avahi
+kernoops
+saned
+nm-openvpn
+hplip
+whoopsie
+colord
+geoclue
+pulse
+gnome-initial-setup
+gdm
+sssd
+user
+systemd-coredump
+vboxadd
+sshd
+user2
+user3
+user4
+user5
+user6
+user@user-VirtualBox:~$ sudo groupadd group6
+user@user-VirtualBox:~$ sudo groupadd group7
+user@user-VirtualBox:~$ sed 's/:.*//' /etc/group
+root
+daemon
+bin
+sys
+adm
+tty
+disk
+lp
+mail
+news
+uucp
+man
+proxy
+kmem
+dialout
+fax
+voice
+cdrom
+floppy
+tape
+sudo
+audio
+dip
+www-data
+backup
+operator
+list
+irc
+src
+gnats
+shadow
+utmp
+video
+sasl
+plugdev
+staff
+games
+users
+nogroup
+systemd-journal
+systemd-network
+systemd-resolve
+systemd-timesync
+crontab
+messagebus
+input
+kvm
+render
+syslog
+tss
+bluetooth
+ssl-cert
+uuidd
+tcpdump
+avahi-autoipd
+rtkit
+ssh
+netdev
+lpadmin
+avahi
+scanner
+saned
+nm-openvpn
+whoopsie
+colord
+geoclue
+pulse
+pulse-access
+gdm
+sssd
+lxd
+user
+sambashare
+systemd-coredump
+vboxsf
+user2
+user3
+user4
+devel
+test1
+test2
+group6
+group7
+user@user-VirtualBox:~$ sudo vim /etc/group
+user@user-VirtualBox:~$ sed 's/:.*//' /etc/group
+root
+daemon
+bin
+sys
+adm
+tty
+disk
+lp
+mail
+news
+uucp
+man
+proxy
+kmem
+dialout
+fax
+voice
+cdrom
+floppy
+tape
+sudo
+audio
+dip
+www-data
+backup
+operator
+list
+irc
+src
+gnats
+shadow
+utmp
+video
+sasl
+plugdev
+staff
+games
+users
+nogroup
+systemd-journal
+systemd-network
+systemd-resolve
+systemd-timesync
+crontab
+messagebus
+input
+kvm
+render
+syslog
+tss
+bluetooth
+ssl-cert
+uuidd
+tcpdump
+avahi-autoipd
+rtkit
+ssh
+netdev
+lpadmin
+avahi
+scanner
+saned
+nm-openvpn
+whoopsie
+colord
+geoclue
+pulse
+pulse-access
+gdm
+sssd
+lxd
+user
+sambashare
+systemd-coredump
+vboxsf
+user2
+user3
+user4
+devel
+test1
+test2
+group6
+group7
+group8
+user@user-VirtualBox:~$ sudo adduser user10
+Adding user `user10' ...
+Adding new group `user10' (1010) ...
+Adding new user `user10' (1006) with group `user10' ...
+Creating home directory `/home/user10' ...
+Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for user10
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+user@user-VirtualBox:~$ groups user10
+user10 : user10
+user@user-VirtualBox:~$ sudo usermod -g group8 user10
+user@user-VirtualBox:~$ groups user10
+user10 : group8
+user@user-VirtualBox:~$ sudo vim /etc/group
+user@user-VirtualBox:~$ groups user10
+user10 : group8
+user@user-VirtualBox:~$ sudo usermod -G group7 user10
+user@user-VirtualBox:~$ groups user10
+user10 : group8 group7
+user@user-VirtualBox:~$ sudo deluser user10 group7
+Removing user `user10' from group `group7' ...
+Done.
+user@user-VirtualBox:~$ groups user10
+user10 : group8
+user@user-VirtualBox:~$ sudo useradd -g sudo super_user
+user@user-VirtualBox:~$ groups super_user
+super_user : sudo
+user@user-VirtualBox:~$ sudo visudo

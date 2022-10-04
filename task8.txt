@@ -1,0 +1,757 @@
+user@user-VirtualBox:~$ ping 192.168.8.1 -c 1
+PING 192.168.8.1 (192.168.8.1) 56(84) bytes of data.
+64 bytes from 192.168.8.1: icmp_seq=1 ttl=64 time=4.84 ms
+
+--- 192.168.8.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 4.835/4.835/4.835/0.000 ms
+user@user-VirtualBox:~$ sudo systemd-resolve --status | grep 192.168.8.1
+[sudo] password for user: 
+  Current DNS Server: 192.168.8.1
+         DNS Servers: 192.168.8.1
+user@user-VirtualBox:~$ ping -c 192.168.8.1
+ping: invalid argument: '192.168.8.1'
+user@user-VirtualBox:~$ ping -c 2  192.168.8.1
+PING 192.168.8.1 (192.168.8.1) 56(84) bytes of data.
+64 bytes from 192.168.8.1: icmp_seq=1 ttl=64 time=5.36 ms
+64 bytes from 192.168.8.1: icmp_seq=2 ttl=64 time=4.93 ms
+
+--- 192.168.8.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 4.933/5.148/5.364/0.215 ms
+user@user-VirtualBox:~$ dig @192.168.8.1 linuxconfig.org
+
+; <<>> DiG 9.16.1-Ubuntu <<>> @192.168.8.1 linuxconfig.org
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43068
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;linuxconfig.org.		IN	A
+
+;; ANSWER SECTION:
+linuxconfig.org.	23	IN	A	188.114.98.128
+
+;; Query time: 4 msec
+;; SERVER: 192.168.8.1#53(192.168.8.1)
+;; WHEN: Чт апр 14 21:59:07 +07 2022
+;; MSG SIZE  rcvd: 49
+
+user@user-VirtualBox:~$ resolvectl query linuxconfig.org
+linuxconfig.org: 188.114.98.128                -- link: enp0s3
+
+-- Information acquired via protocol DNS in 32.4ms.
+-- Data is authenticated: no
+user@user-VirtualBox:~$ sudo apt update
+Err:1 http://security.ubuntu.com/ubuntu focal-security InRelease           
+  Temporary failure resolving 'security.ubuntu.com'
+Err:2 http://nginx.org/packages/ubuntu focal InRelease                     
+  Temporary failure resolving 'nginx.org'
+Err:3 https://download.docker.com/linux/ubuntu focal InRelease             
+  Temporary failure resolving 'download.docker.com'
+Err:4 http://ppa.launchpad.net/nginx/stable/ubuntu focal InRelease         
+  Temporary failure resolving 'ppa.launchpad.net'
+Err:5 http://ru.archive.ubuntu.com/ubuntu focal InRelease                  
+  Temporary failure resolving 'ru.archive.ubuntu.com'
+Err:6 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+  Temporary failure resolving 'ru.archive.ubuntu.com'
+0% [Working]^C                          
+user@user-VirtualBox:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  geoip-database libfwupdplugin1 libgeoip1 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip linux-image-5.13.0-30-generic
+  linux-modules-5.13.0-30-generic linux-modules-extra-5.13.0-30-generic
+  nginx-common nginx-core
+Use 'sudo apt autoremove' to remove them.
+The following packages will be upgraded:
+  alsa-ucm-conf bind9-host bolt command-not-found firefox
+  firefox-locale-en fonts-opensymbol grub-common grub-pc grub-pc-bin
+  grub2-common libarchive13 libfprint-2-2 libfprint-2-tod1 libjurt-java
+  libnetplan0 libreoffice-common libreoffice-pdfimport
+  libreoffice-style-colibre libridl-java libsmbclient libuno-cppu3
+  libuno-purpenvhelpergcc3-3 libunoloader-java libwbclient0 linux-firmware
+  netplan.io python3-commandnotfound rsync samba-libs tcpdump
+  thunderbird-locale-en-us tzdata ubuntu-advantage-tools
+  ubuntu-drivers-common
+35 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+17 standard security updates
+Need to get 221 MB of archives.
+After this operation, 31,9 MB of additional disk space will be used.
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+Do you want to continue? [Y/n] y
+Err:1 http://security.ubuntu.com/ubuntu focal-security/main amd64 libarchive13 amd64 3.4.0-2ubuntu1.2
+  Temporary failure resolving 'security.ubuntu.com'
+Ign:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 rsync amd64 3.1.3-8ubuntu0.3
+Err:3 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libsmbclient amd64 2:4.13.17~dfsg-0ubuntu0.21.04.2
+  Temporary failure resolving 'ru.archive.ubuntu.com'
+Err:2 http://security.ubuntu.com/ubuntu focal-updates/main amd64 rsync amd64 3.1.3-8ubuntu0.3
+  Temporary failure resolving 'ru.archive.ubuntu.com'
+Err:4 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libwbclient0 amd64 2:4.13.17~dfsg-0ubuntu0.21.04.2
+  Temporary failure resolving 'ru.archive.ubuntu.com'
+0% [Connecting to ru.archive.ubuntu.com]^C
+user@user-VirtualBox:~$ sudo ping archive.ubuntu.com
+ping: archive.ubuntu.com: Temporary failure in name resolution
+user@user-VirtualBox:~$ echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+user@user-VirtualBox:~$ sudo apt-get update
+Get:1 http://nginx.org/packages/ubuntu focal InRelease [3 587 B]           
+Hit:2 http://ru.archive.ubuntu.com/ubuntu focal InRelease                  
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]  
+Hit:4 http://ppa.launchpad.net/nginx/stable/ubuntu focal InRelease         
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB] 
+Hit:6 https://download.docker.com/linux/ubuntu focal InRelease             
+Get:7 http://nginx.org/packages/ubuntu focal/nginx amd64 Packages [16,1 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1 385 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [629 kB]
+Get:11 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1 712 kB]
+Get:12 http://ru.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [320 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [277 kB]
+Get:14 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14,9 kB]
+Get:15 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [918 kB]
+Get:16 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [677 kB]
+Get:17 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [205 kB]
+Get:18 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [391 kB]
+Get:19 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20,6 kB]
+Get:20 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Get:21 http://ru.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7 980 B]
+Get:22 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30,8 kB]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [418 kB]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [240 kB]
+Get:25 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,7 kB]
+Get:26 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [10,0 kB]
+Get:27 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [698 kB]
+Get:28 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [548 kB]
+Get:29 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [124 kB]
+Get:30 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66,6 kB]
+Get:31 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [14,3 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2 464 B]
+Fetched 9 108 kB in 15s (621 kB/s)                                         
+Reading package lists... Done
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu focal InRelease' doesn't support architecture 'i386'
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+N: Skipping acquire of configured file 'stable/binary-am64/Packages' as repository 'https://download.docker.com/linux/ubuntu focal InRelease' doesn't support architecture 'am64'
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+user@user-VirtualBox:~$ sudo ping archive.ubuntu.com
+PING archive.ubuntu.com (91.189.91.39) 56(84) bytes of data.
+^C
+--- archive.ubuntu.com ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 4081ms
+
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu
+> $(lsb_release -cs) stable"
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]  
+Hit:2 http://ppa.launchpad.net/nginx/stable/ubuntu focal InRelease         
+Hit:3 https://download.docker.com/linux/ubuntu focal InRelease             
+Hit:4 http://ru.archive.ubuntu.com/ubuntu focal InRelease                  
+Hit:5 http://nginx.org/packages/ubuntu focal InRelease                     
+Hit:6 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease          
+Hit:7 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Fetched 114 kB in 10s (11,2 kB/s)                        
+Reading package lists... Done
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+N: Skipping acquire of configured file 'stable/binary-am64/Packages' as repository 'https://download.docker.com/linux/ubuntu focal InRelease' doesn't support architecture 'am64'
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu focal InRelease' doesn't support architecture 'i386'
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+user@user-VirtualBox:~$ sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease                  
+Hit:2 http://nginx.org/packages/ubuntu focal InRelease                     
+Hit:3 http://ppa.launchpad.net/nginx/stable/ubuntu focal InRelease         
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]  
+Hit:5 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease          
+Hit:6 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease        
+Hit:7 https://download.docker.com/linux/ubuntu focal InRelease             
+Fetched 114 kB in 7s (17,5 kB/s)                                           
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+52 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu focal InRelease' doesn't support architecture 'i386'
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+N: Skipping acquire of configured file 'stable/binary-am64/Packages' as repository 'https://download.docker.com/linux/ubuntu focal InRelease' doesn't support architecture 'am64'
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+user@user-VirtualBox:~$ apt install docker-ce -y
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+user@user-VirtualBox:~$ sudo apt install docker-ce -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+docker-ce is already the newest version (5:20.10.14~3-0~ubuntu-focal).
+The following packages were automatically installed and are no longer required:
+  geoip-database libfwupdplugin1 libgeoip1 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip linux-image-5.13.0-30-generic
+  linux-modules-5.13.0-30-generic linux-modules-extra-5.13.0-30-generic
+  nginx-common nginx-core
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 52 not upgraded.
+user@user-VirtualBox:~$ sudo apt install -y docker docker-compose
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+docker is already the newest version (1.5-2).
+The following packages were automatically installed and are no longer required:
+  geoip-database libfwupdplugin1 libgeoip1 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip linux-image-5.13.0-30-generic
+  linux-modules-5.13.0-30-generic linux-modules-extra-5.13.0-30-generic
+  nginx-common nginx-core
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  python3-attr python3-cached-property python3-distutils python3-docker
+  python3-dockerpty python3-docopt python3-importlib-metadata
+  python3-jsonschema python3-more-itertools python3-pyrsistent
+  python3-setuptools python3-texttable python3-websocket python3-zipp
+Suggested packages:
+  python-attr-doc python-jsonschema-doc python-setuptools-doc
+Recommended packages:
+  docker.io
+The following NEW packages will be installed:
+  docker-compose python3-attr python3-cached-property python3-distutils
+  python3-docker python3-dockerpty python3-docopt
+  python3-importlib-metadata python3-jsonschema python3-more-itertools
+  python3-pyrsistent python3-setuptools python3-texttable
+  python3-websocket python3-zipp
+0 upgraded, 15 newly installed, 0 to remove and 52 not upgraded.
+Need to get 916 kB of archives.
+After this operation, 5 436 kB of additional disk space will be used.
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 python3-cached-property all 1.5.1-4 [10,9 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 python3-websocket all 0.53.0-2ubuntu1 [32,3 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 python3-docker all 4.1.0-1 [83,8 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 python3-dockerpty all 0.4.1-2 [11,1 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 python3-docopt all 0.6.2-2.2ubuntu1 [19,7 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 python3-attr all 19.3.0-2 [33,9 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-distutils all 3.8.10-0ubuntu1~20.04 [141 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 python3-setuptools all 45.2.0-1 [330 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 python3-more-itertools all 4.2.0-1build1 [39,4 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 python3-zipp all 1.0.0-1 [5 312 B]
+Get:11 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 python3-importlib-metadata all 1.5.0-1 [9 992 B]
+Get:12 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 python3-pyrsistent amd64 0.15.5-1build1 [52,1 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 python3-jsonschema all 3.2.0-0ubuntu2 [43,1 kB]
+Get:14 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 python3-texttable all 1.6.2-2 [11,0 kB]
+Get:15 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 docker-compose all 1.25.0-1 [92,7 kB]
+Fetched 916 kB in 6s (143 kB/s)                                            
+Selecting previously unselected package python3-cached-property.
+(Reading database ... 224574 files and directories currently installed.)
+Preparing to unpack .../00-python3-cached-property_1.5.1-4_all.deb ...
+Unpacking python3-cached-property (1.5.1-4) ...
+Selecting previously unselected package python3-websocket.
+Preparing to unpack .../01-python3-websocket_0.53.0-2ubuntu1_all.deb ...
+Unpacking python3-websocket (0.53.0-2ubuntu1) ...
+Selecting previously unselected package python3-docker.
+Preparing to unpack .../02-python3-docker_4.1.0-1_all.deb ...
+Unpacking python3-docker (4.1.0-1) ...
+Selecting previously unselected package python3-dockerpty.
+Preparing to unpack .../03-python3-dockerpty_0.4.1-2_all.deb ...
+Unpacking python3-dockerpty (0.4.1-2) ...
+Selecting previously unselected package python3-docopt.
+Preparing to unpack .../04-python3-docopt_0.6.2-2.2ubuntu1_all.deb ...
+Unpacking python3-docopt (0.6.2-2.2ubuntu1) ...
+Selecting previously unselected package python3-attr.
+Preparing to unpack .../05-python3-attr_19.3.0-2_all.deb ...
+Unpacking python3-attr (19.3.0-2) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../06-python3-distutils_3.8.10-0ubuntu1~20.04_all.deb .
+..
+Unpacking python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Selecting previously unselected package python3-setuptools.
+Preparing to unpack .../07-python3-setuptools_45.2.0-1_all.deb ...
+Unpacking python3-setuptools (45.2.0-1) ...
+Selecting previously unselected package python3-more-itertools.
+Preparing to unpack .../08-python3-more-itertools_4.2.0-1build1_all.deb ...
+Unpacking python3-more-itertools (4.2.0-1build1) ...
+Selecting previously unselected package python3-zipp.
+Preparing to unpack .../09-python3-zipp_1.0.0-1_all.deb ...
+Unpacking python3-zipp (1.0.0-1) ...
+Selecting previously unselected package python3-importlib-metadata.
+Preparing to unpack .../10-python3-importlib-metadata_1.5.0-1_all.deb ...
+Unpacking python3-importlib-metadata (1.5.0-1) ...
+Selecting previously unselected package python3-pyrsistent:amd64.
+Preparing to unpack .../11-python3-pyrsistent_0.15.5-1build1_amd64.deb ...
+Unpacking python3-pyrsistent:amd64 (0.15.5-1build1) ...
+Selecting previously unselected package python3-jsonschema.
+Preparing to unpack .../12-python3-jsonschema_3.2.0-0ubuntu2_all.deb ...
+Unpacking python3-jsonschema (3.2.0-0ubuntu2) ...
+Selecting previously unselected package python3-texttable.
+Preparing to unpack .../13-python3-texttable_1.6.2-2_all.deb ...
+Unpacking python3-texttable (1.6.2-2) ...
+Selecting previously unselected package docker-compose.
+Preparing to unpack .../14-docker-compose_1.25.0-1_all.deb ...
+Unpacking docker-compose (1.25.0-1) ...
+Setting up python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Setting up python3-cached-property (1.5.1-4) ...
+Setting up python3-more-itertools (4.2.0-1build1) ...
+Setting up python3-attr (19.3.0-2) ...
+Setting up python3-texttable (1.6.2-2) ...
+Setting up python3-docopt (0.6.2-2.2ubuntu1) ...
+Setting up python3-setuptools (45.2.0-1) ...
+Setting up python3-zipp (1.0.0-1) ...
+Setting up python3-pyrsistent:amd64 (0.15.5-1build1) ...
+Setting up python3-websocket (0.53.0-2ubuntu1) ...
+update-alternatives: using /usr/bin/python3-wsdump to provide /usr/bin/wsdum
+p (wsdump) in auto mode
+Setting up python3-dockerpty (0.4.1-2) ...
+Setting up python3-importlib-metadata (1.5.0-1) ...
+Setting up python3-docker (4.1.0-1) ...
+Setting up python3-jsonschema (3.2.0-0ubuntu2) ...
+Setting up docker-compose (1.25.0-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+user@user-VirtualBox:~$ sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease                  
+Hit:2 http://nginx.org/packages/ubuntu focal InRelease                     
+Hit:3 http://ppa.launchpad.net/nginx/stable/ubuntu focal InRelease         
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB] 
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]  
+Hit:6 https://download.docker.com/linux/ubuntu focal InRelease             
+Get:7 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [278 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [391 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:11 http://ru.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7 996 B]
+Get:12 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30,8 kB]
+Fetched 1 044 kB in 7s (146 kB/s)                                          
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+52 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Skipping acquire of configured file 'nginx/binary-i386/Packages' as repository 'http://nginx.org/packages/ubuntu focal InRelease' doesn't support architecture 'i386'
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+N: Skipping acquire of configured file 'stable/binary-am64/Packages' as repository 'https://download.docker.com/linux/ubuntu focal InRelease' doesn't support architecture 'am64'
+W: Target Packages (stable/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target Translations (stable/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11 (stable/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-small (stable/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons (stable/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target DEP-11-icons-hidpi (stable/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+W: Target CNF (stable/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:60 and /etc/apt/sources.list:62
+user@user-VirtualBox:~$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor pr>
+     Active: active (running) since Sun 2022-04-10 23:34:40 +07; 3 days ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 46474 (dockerd)
+      Tasks: 14
+     Memory: 39.7M
+     CGroup: /system.slice/docker.service
+             └─46474 /usr/bin/dockerd -H fd:// --containerd=/run/containerd>
+
+апр 12 16:18:07 user-VirtualBox dockerd[46474]: time="2022-04-12T16:18:07.4>
+апр 12 16:18:07 user-VirtualBox dockerd[46474]: time="2022-04-12T16:18:07.4>
+апр 12 16:22:52 user-VirtualBox dockerd[46474]: time="2022-04-12T16:22:52.0>
+апр 12 16:22:52 user-VirtualBox dockerd[46474]: time="2022-04-12T16:22:52.0>
+апр 12 16:22:52 user-VirtualBox dockerd[46474]: time="2022-04-12T16:22:52.0>
+апр 12 16:43:42 user-VirtualBox dockerd[46474]: time="2022-04-12T16:43:42.4>
+апр 12 16:43:42 user-VirtualBox dockerd[46474]: time="2022-04-12T16:43:42.4>
+апр 12 16:57:47 user-VirtualBox dockerd[46474]: time="2022-04-12T16:57:47.4>
+апр 12 16:57:47 user-VirtualBox dockerd[46474]: time="2022-04-12T16:57:47.4>
+апр 12 16:57:47 user-VirtualBox dockerd[46474]: time="2022-04-12T16:57:47.4>
+lines 1-21
+^C
+user@user-VirtualBox:~$ 
+user@user-VirtualBox:~$ sudo doker -v
+sudo: doker: command not found
+user@user-VirtualBox:~$ sudo docker -v
+Docker version 20.10.14, build a224086
+user@user-VirtualBox:~$ 
+
+
+
+
+
+user@user-VirtualBox:~$ docker ps -a
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json?all=1": dial unix /var/run/docker.sock: connect: permission denied
+user@user-VirtualBox:~$ sudo docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS                    PORTS     NAMES
+8f3525e803b6   ubuntu:20.04   "bash"                   2 days ago   Up 2 days                           quirky_goldberg
+186132d75abd   ubuntu:20.04   "bash"                   2 days ago   Up 2 days                           exciting_pasteur
+ee0a89ae49b0   hello-world    "/hello"                 2 days ago   Exited (0) 2 days ago               zealous_mahavira
+39ba90d19b35   ubuntu:20.04   "bash"                   2 days ago   Up 2 days                           determined_pare
+04c326b8ce63   ubuntu:20.04   "bash"                   2 days ago   Up 2 days                           jolly_heisenberg
+760c973574a1   ubuntu:20.04   "bash"                   2 days ago   Up 2 days                           goofy_hopper
+1a924d82fe18   ubuntu:20.04   "bash"                   2 days ago   Up 2 days                           amazing_lovelace
+53c94fefddd9   ubuntu:20.04   "bash"                   3 days ago   Up 3 days                           magical_curie
+f7a679b3f015   ubuntu:20.04   "bash"                   3 days ago   Up 3 days                           wizardly_euler
+b5a174ea5223   ubuntu:20.04   "bash"                   3 days ago   Exited (127) 3 days ago             funny_chebyshev
+ff7550a11c16   ubuntu:20.04   "bash"                   3 days ago   Exited (0) 3 days ago               optimistic_brown
+4d110b7b604f   ubuntu:20.04   "/bin/bash -c 'echo …"   4 days ago   Exited (0) 4 days ago               compassionate_swartz
+f7fbdf423558   ubuntu:20.04   "bash"                   4 days ago   Exited (0) 3 days ago               beautiful_hodgkin
+b4c2cc897ddc   ubuntu:20.04   "echo Hello"             4 days ago   Exited (0) 4 days ago               loving_carson
+dae4f588d3cf   hello-world    "/hello"                 4 days ago   Exited (0) 4 days ago               magical_margulis
+8fcd4180c44a   hello-world    "/hello"                 4 days ago   Exited (0) 4 days ago               nice_ptolemy
+user@user-VirtualBox:~$ sudo docker  run ubuntu
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+Digest: sha256:9101220a875cee98b016668342c489ff0674f247f6ca20dfc91b91c0f28581ae
+Status: Downloaded newer image for ubuntu:latest
+user@user-VirtualBox:~$ sudo docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS     NAMES
+af2535fed2ed   ubuntu         "bash"                   28 seconds ago   Exited (0) 27 seconds ago             sad_meitner
+8f3525e803b6   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             quirky_goldberg
+186132d75abd   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             exciting_pasteur
+ee0a89ae49b0   hello-world    "/hello"                 2 days ago       Exited (0) 2 days ago                 zealous_mahavira
+39ba90d19b35   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             determined_pare
+04c326b8ce63   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             jolly_heisenberg
+760c973574a1   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             goofy_hopper
+1a924d82fe18   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             amazing_lovelace
+53c94fefddd9   ubuntu:20.04   "bash"                   3 days ago       Up 3 days                             magical_curie
+f7a679b3f015   ubuntu:20.04   "bash"                   3 days ago       Up 3 days                             wizardly_euler
+b5a174ea5223   ubuntu:20.04   "bash"                   3 days ago       Exited (127) 3 days ago               funny_chebyshev
+ff7550a11c16   ubuntu:20.04   "bash"                   3 days ago       Exited (0) 3 days ago                 optimistic_brown
+4d110b7b604f   ubuntu:20.04   "/bin/bash -c 'echo …"   4 days ago       Exited (0) 4 days ago                 compassionate_swartz
+f7fbdf423558   ubuntu:20.04   "bash"                   4 days ago       Exited (0) 3 days ago                 beautiful_hodgkin
+b4c2cc897ddc   ubuntu:20.04   "echo Hello"             4 days ago       Exited (0) 4 days ago                 loving_carson
+dae4f588d3cf   hello-world    "/hello"                 4 days ago       Exited (0) 4 days ago                 magical_margulis
+8fcd4180c44a   hello-world    "/hello"                 4 days ago       Exited (0) 4 days ago                 nice_ptolemy
+user@user-VirtualBox:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ser@user-VirtualBox:~/lesson8$ sudo docker run -it ubuntu:20.04 /bin/bash -c "echo \" HH\""
+ HH
+user@user-VirtualBox:~/lesson8$ sudo docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS     NAMES
+526566b1539b   ubuntu:20.04   "/bin/bash -c 'echo …"   16 seconds ago   Exited (0) 15 seconds ago             peaceful_greider
+0e96d1e557d2   ubuntu:20.04   "echo H"                 8 minutes ago    Exited (0) 8 minutes ago              sleepy_brattain
+f6c410aa8edc   hello-world    "/hello"                 18 minutes ago   Exited (0) 18 minutes ago             loving_driscoll
+352f6f7c2f15   hello-world    "/hello"                 21 minutes ago   Exited (0) 17 minutes ago             confident_mendel
+af2535fed2ed   ubuntu         "bash"                   32 minutes ago   Exited (0) 32 minutes ago             sad_meitner
+8f3525e803b6   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             quirky_goldberg
+186132d75abd   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             exciting_pasteur
+ee0a89ae49b0   hello-world    "/hello"                 2 days ago       Exited (0) 2 days ago                 zealous_mahavira
+39ba90d19b35   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             determined_pare
+04c326b8ce63   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             jolly_heisenberg
+760c973574a1   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             goofy_hopper
+1a924d82fe18   ubuntu:20.04   "bash"                   2 days ago       Up 2 days                             amazing_lovelace
+53c94fefddd9   ubuntu:20.04   "bash"                   3 days ago       Up 3 days                             magical_curie
+f7a679b3f015   ubuntu:20.04   "bash"                   3 days ago       Up 3 days                             wizardly_euler
+b5a174ea5223   ubuntu:20.04   "bash"                   4 days ago       Exited (127) 3 days ago               funny_chebyshev
+ff7550a11c16   ubuntu:20.04   "bash"                   4 days ago       Exited (0) 3 days ago                 optimistic_brown
+4d110b7b604f   ubuntu:20.04   "/bin/bash -c 'echo …"   4 days ago       Exited (0) 4 days ago                 compassionate_swartz
+f7fbdf423558   ubuntu:20.04   "bash"                   4 days ago       Exited (0) 3 days ago                 beautiful_hodgkin
+b4c2cc897ddc   ubuntu:20.04   "echo Hello"             4 days ago       Exited (0) 4 days ago                 loving_carson
+dae4f588d3cf   hello-world    "/hello"                 4 days ago       Exited (0) 4 days ago                 magical_margulis
+8fcd4180c44a   hello-world    "/hello"                 4 days ago       Exited (0) 4 days ago                 nice_ptolemy
+user@user-VirtualBox:~/lesson8$ sudo docker run -h  f_d --name g_d -it ubuntu:20.04 /bin/bash
+root@f_d:/# ps
+    PID TTY          TIME CMD
+      1 pts/0    00:00:00 bash
+     10 pts/0    00:00:00 ps
+root@f_d:/# ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 16:04 pts/0    00:00:00 /bin/bash
+root          11       1  0 16:04 pts/0    00:00:00 ps -ef
+root@f_d:/# ps ef
+    PID TTY      STAT   TIME COMMAND
+      1 pts/0    Ss     0:00 /bin/bash PATH=/usr/local/sbin:/usr/local/bin:/
+     12 pts/0    R+     0:00 ps ef HOSTNAME=f_d PWD=/ HOME=/root LS_COLORS=r
+root@f_d:/# 
+root@f_d:/# 
+root@f_d:/# 
+root@f_d:/# 
+root@f_d:/# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0     4K  1 loop 
+loop1    7:1    0  55.5M  1 loop 
+loop2    7:2    0  61.9M  1 loop 
+loop3    7:3    0  54.2M  1 loop 
+loop4    7:4    0  65.2M  1 loop 
+loop5    7:5    0 248.8M  1 loop 
+loop6    7:6    0  43.6M  1 loop 
+loop7    7:7    0  43.6M  1 loop 
+loop8    7:8    0  61.9M  1 loop 
+loop9    7:9    0   4.6M  1 loop 
+sda      8:0    0  40.9G  0 disk 
+|-sda1   8:1    0   512M  0 part 
+|-sda2   8:2    0     1K  0 part 
+`-sda5   8:5    0  40.4G  0 part /etc/hosts
+sr0     11:0    1  58.4M  0 rom  
+root@f_d:/# mount
+overlay on / type overlay (rw,relatime,lowerdir=/var/lib/docker/overlay2/l/AOTAEUXAIH7YHNTWR354CP5Q6T:/var/lib/docker/overlay2/l/23NCV4KEB7NR4JUX6YKVG6XUVO,upperdir=/var/lib/docker/overlay2/f14e81ff3514ce099aadbbc83e5f7484b2be58206b8bf7f291620ed9b7209a06/diff,workdir=/var/lib/docker/overlay2/f14e81ff3514ce099aadbbc83e5f7484b2be58206b8bf7f291620ed9b7209a06/work)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+sysfs on /sys type sysfs (ro,nosuid,nodev,noexec,relatime)
+tmpfs on /sys/fs/cgroup type tmpfs (rw,nosuid,nodev,noexec,relatime,mode=755,inode64)
+cgroup on /sys/fs/cgroup/systemd type cgroup (ro,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+cgroup on /sys/fs/cgroup/freezer type cgroup (ro,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (ro,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/rdma type cgroup (ro,nosuid,nodev,noexec,relatime,rdma)
+cgroup on /sys/fs/cgroup/misc type cgroup (ro,nosuid,nodev,noexec,relatime,misc)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (ro,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (ro,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/memory type cgroup (ro,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/blkio type cgroup (ro,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (ro,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/pids type cgroup (ro,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (ro,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/devices type cgroup (ro,nosuid,nodev,noexec,relatime,devices)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k,inode64)
+/dev/sda5 on /etc/resolv.conf type ext4 (rw,relatime,errors=remount-ro)
+/dev/sda5 on /etc/hostname type ext4 (rw,relatime,errors=remount-ro)
+/dev/sda5 on /etc/hosts type ext4 (rw,relatime,errors=remount-ro)
+devpts on /dev/console type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+proc on /proc/bus type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/fs type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/irq type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sys type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sysrq-trigger type proc (ro,nosuid,nodev,noexec,relatime)
+tmpfs on /proc/asound type tmpfs (ro,relatime,inode64)
+tmpfs on /proc/acpi type tmpfs (ro,relatime,inode64)
+tmpfs on /proc/kcore type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+tmpfs on /proc/keys type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+tmpfs on /proc/timer_list type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+tmpfs on /proc/scsi type tmpfs (ro,relatime,inode64)
+tmpfs on /sys/firmware type tmpfs (ro,relatime,inode64)
+root@f_d:/# ls -al /
+total 56
+drwxr-xr-x   1 root root 4096 Apr 14 16:04 .
+drwxr-xr-x   1 root root 4096 Apr 14 16:04 ..
+-rwxr-xr-x   1 root root    0 Apr 14 16:04 .dockerenv
+lrwxrwxrwx   1 root root    7 Apr  5 04:59 bin -> usr/bin
+drwxr-xr-x   2 root root 4096 Apr 15  2020 boot
+drwxr-xr-x   5 root root  360 Apr 14 16:04 dev
+drwxr-xr-x   1 root root 4096 Apr 14 16:04 etc
+drwxr-xr-x   2 root root 4096 Apr 15  2020 home
+lrwxrwxrwx   1 root root    7 Apr  5 04:59 lib -> usr/lib
+lrwxrwxrwx   1 root root    9 Apr  5 04:59 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root    9 Apr  5 04:59 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root   10 Apr  5 04:59 libx32 -> usr/libx32
+drwxr-xr-x   2 root root 4096 Apr  5 04:59 media
+drwxr-xr-x   2 root root 4096 Apr  5 04:59 mnt
+drwxr-xr-x   2 root root 4096 Apr  5 04:59 opt
+dr-xr-xr-x 286 root root    0 Apr 14 16:04 proc
+drwx------   2 root root 4096 Apr  5 05:02 root
+drwxr-xr-x   5 root root 4096 Apr  5 05:02 run
+lrwxrwxrwx   1 root root    8 Apr  5 04:59 sbin -> usr/sbin
+drwxr-xr-x   2 root root 4096 Apr  5 04:59 srv
+dr-xr-xr-x  13 root root    0 Apr 14 16:04 sys
+drwxrwxrwt   2 root root 4096 Apr  5 05:02 tmp
+drwxr-xr-x  13 root root 4096 Apr  5 04:59 usr
+drwxr-xr-x  11 root root 4096 Apr  5 05:02 var
+root@f_d:/# 
+root@f_d:/# 
+root@f_d:/# 
+root@f_d:/# 
+root@f_d:/# 
+root@f_d:/# apt update
+Err:1 http://archive.ubuntu.com/ubuntu focal InRelease                   
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:2 http://security.ubuntu.com/ubuntu focal-security InRelease         
+  Temporary failure resolving 'security.ubuntu.com'
+Err:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease           
+  Could not connect to archive.ubuntu.com:80 (185.125.190.39), connection timed out Could not connect to archive.ubuntu.com:80 (185.125.190.36), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.91.38), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.91.39), connection timed out
+Err:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+  Unable to connect to archive.ubuntu.com:http:
+Reading package lists... Done                       
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Could not connect to archive.ubuntu.com:80 (185.125.190.39), connection timed out Could not connect to archive.ubuntu.com:80 (185.125.190.36), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.91.38), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.91.39), connection timed out
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Unable to connect to archive.ubuntu.com:http:
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+root@f_d:/# ping 8.8.8.8 
+bash: ping: command not found
+root@f_d:/# apt upgrate
+E: Invalid operation upgrate
+root@f_d:/# vim
+bash: vim: command not found
+root@f_d:/#  ping 192.168.8.1 -c 1
+bash: ping: command not found
+root@f_d:/# sudo  ping 192.168.8.1 -c 1
+bash: sudo: command not found
+root@f_d:/# help--
+bash: help--: command not found
+root@f_d:/# --help
+bash: --help: command not found
+root@f_d:/# update
+bash: update: command not found
+root@f_d:/# apt
+apt 2.0.6 (amd64)
+Usage: apt [options] command
+
+apt is a commandline package manager and provides commands for
+searching and managing as well as querying information about packages.
+It provides the same functionality as the specialized APT tools,
+like apt-get and apt-cache, but enables options more suitable for
+interactive use by default.
+
+Most used commands:
+  list - list packages based on package names
+  search - search in package descriptions
+  show - show package details
+  install - install packages
+  reinstall - reinstall packages
+  remove - remove packages
+  autoremove - Remove automatically all unused packages
+  update - update list of available packages
+  upgrade - upgrade the system by installing/upgrading packages
+  full-upgrade - upgrade the system by removing/installing/upgrading packages
+  edit-sources - edit the source information file
+  satisfy - satisfy dependency strings
+
+See apt(8) for more information about the available commands.
+Configuration options and syntax is detailed in apt.conf(5).
+Information about how to configure sources can be found in sources.list(5).
+Package and version choices can be expressed via apt_preferences(5).
+Security details are available in apt-secure(8).
+                                        This APT has Super Cow Powers.
+root@f_d:/# apt install
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@f_d:/# apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@f_d:/# apt update
+Err:1 http://security.ubuntu.com/ubuntu focal-security InRelease         
+  Temporary failure resolving 'security.ubuntu.com'
+Err:2 http://archive.ubuntu.com/ubuntu focal InRelease                   
+  Temporary failure resolving 'archive.ubuntu.com'
+0% [Connecting to archive.ubuntu.com (91.189.91.38)]  
+0% [Connecting to archive.ubuntu.com (91.189.91.38)]
+Err:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+  Could not connect to archive.ubuntu.com:80 (91.189.91.39), connection timed out Could not connect to archive.ubuntu.com:80 (185.125.190.36), connection timed out Could not connect to archive.ubuntu.com:80 (185.125.190.39), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.91.38), connection timed out
+Err:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+  Unable to connect to archive.ubuntu.com:http:
+Reading package lists... Done                       
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Could not connect to archive.ubuntu.com:80 (91.189.91.39), connection timed out Could not connect to archive.ubuntu.com:80 (185.125.190.36), connection timed out Could not connect to archive.ubuntu.com:80 (185.125.190.39), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.91.38), connection timed out
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Unable to connect to archive.ubuntu.com:http:
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+
+
+
+
+
